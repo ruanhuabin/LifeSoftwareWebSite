@@ -1,0 +1,120 @@
+#header {height:185px; width:100%;background-image: url(images/banner.png);background-repeat: no-repeat; background-color:white;}
+body 
+{	
+	background-color:white;	
+	font-family: "Times New Roman",Georgia,Serif
+}
+#footer {
+	width:100%;
+	border-top:  #000000 1px solid;
+	text-align:center;
+	font-size:12px;
+	}
+	
+
+.form-div {
+    /* border: 1px solid black; */
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    background-color: white;
+}
+
+#admin-login-form {
+    
+   /*  margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 200px;
+    background-color: white; */
+    align: center
+    
+}
+
+#content-div {
+   /*  border: 1px solid black; */
+    margin-top: 40px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 0px;
+    background-color: white;
+}
+
+#main-container {
+	width:1000px;
+	/* width:80% */
+	border: #000000 0px solid;
+	margin: 0 auto;
+ 	background-color:#FEFEFE;
+   /*  background-color:white; */
+   
+    clear:both;
+	/* padding:25px 100px; */
+	padding:10px 100px
+	}
+	
+#leftbar {
+	float:left;
+	width:800px;
+	border-right:1px solid #BCBDBC;
+}
+
+#rightbar {
+	float:left;
+	width:200px;
+}
+
+a
+{	
+	text-decoration: none;
+	color:blue;	
+}
+
+a:hover
+{
+	color:red;
+}
+a:visited 
+{
+	color: blue; 
+} 
+
+ul {margin-left: 0; padding-left: 40px;}
+/* li {margin-left: 0; padding-left: 50px;} */
+
+#navigation{list-style:none; text-align:left; font-size:20px; background:white; float:left} 
+#navigation li{width:160px; height:20px; line-height:0px; float:left; margin:2px; list-style:none;} 
+#navigation a{height:100%; display:block; text-decoration:none} 
+#navigation .curr{background:url(sub/images/nav_on.png); color:red;}
+
+
+ul, li { list-style: none; margin: 0; padding: 0; }
+ul { padding-left: 1em; }
+li { padding-left: 1em;
+  border: 1px dotted black;
+  border-width: 0 0 1px 1px; 
+}
+li.container { border-bottom: 0px; }
+li.empty { font-style: italic;
+  color: silver;
+  border-color: silver;
+}
+li p { margin: 0;
+  background: white;
+  position: relative;
+  top: 0.5em; 
+}
+li ul { 
+  border-top: 1px dotted black; 
+  margin-left: -1em;     
+  padding-left: 2em; 
+}
+ul li:last-child ul {
+  border-left: 1px solid white;
+  margin-left: -17px;
+} 
+
+
+
+

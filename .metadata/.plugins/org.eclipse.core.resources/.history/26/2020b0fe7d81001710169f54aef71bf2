@@ -1,0 +1,42 @@
+package cn.edu.tsinghua.po;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Category {
+	
+	private int cid;
+	private String title;
+	private List<SubCategory> subCatogories = new ArrayList<SubCategory>();
+	
+	
+	public int getCid() {
+		return cid;
+	}
+	public void setCid(int cid) {
+		this.cid = cid;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public List<SubCategory> getSubCatogories() {
+		return subCatogories;
+	}
+	public void setSubCategories(List<SubCategory> subCatogories) {
+		this.subCatogories = subCatogories;
+	}
+	@Override
+	public String toString() {
+		return "Catagory [cid=" + cid + ", title=" + title + ", subCatogories="
+				+ subCatogories + "]";
+	}
+	
+	
+	
+	
+	
+
+}

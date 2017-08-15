@@ -1,0 +1,8 @@
+INDEX VERSION 1.122+D:\MyEclipse_workspace_CryoEM\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2736288438.index
+1939265791.index
+519874294.index
+2120432519.index
+2947577706.index
+2235883989.index
+519874294.index

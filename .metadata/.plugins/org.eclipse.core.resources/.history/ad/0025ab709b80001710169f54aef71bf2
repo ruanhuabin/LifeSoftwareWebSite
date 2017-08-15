@@ -1,0 +1,24 @@
+package cn.edu.tsinghua.entity;
+
+import java.util.List;
+
+public class Catagory {
+	
+	private String title;
+	private List<SubCatagory> subCatogories;
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public List<SubCatogory> getSubCatogories() {
+		return subCatogories;
+	}
+	public void setSubCatogories(List<SubCatogory> subCatogories) {
+		this.subCatogories = subCatogories;
+	}
+	
+	
+
+}

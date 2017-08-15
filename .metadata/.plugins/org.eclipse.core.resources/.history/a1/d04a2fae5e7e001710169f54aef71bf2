@@ -1,0 +1,100 @@
+/* CSS Document */
+
+body 
+{	
+	background-color:blue;	
+	font-family: "Times New Roman",Georgia,Serif
+}
+	
+a
+{	
+	text-decoration: none;
+	color:blue;	
+}
+
+a:hover
+{
+	color:brown;
+}
+a:visited 
+{
+	color: blue; 
+} 
+
+
+
+#main_container_x {
+	width:100%;
+	/* width:80% */
+	border: #000000 0px solid;
+	margin: 0 auto;
+/* 	background-color:#FEFEFE; */
+    background-color:white;
+	}
+	
+#header {
+	height:185px;
+	width:100%;
+	background-image: url(images/banner.png);
+	background-repeat: no-repeat;
+	 background-color:white;
+	
+	}
+	
+h1 {
+	size:30px;
+	float:right;
+	vertical-align:middle;
+	margin: 10px 20px 0 0;	
+	font-family: "Times New Roman",Georgia,Serif
+	}
+	
+h2 {
+	padding-left: 5px;
+	margin: 5px 0px 0px 0px;
+	}
+	
+p {
+	size: 10px;
+	margin:0px;
+	padding:10px;
+	text-align:justify;
+	}
+
+
+#navigation {
+	width:100%;
+	border-top:  #000000 0px solid;
+	border-bottom: #000000 2px solid;
+	/*text-align:center;*/
+	text-align:right;
+	}
+#navigation li {
+	width: 160px;
+	height: 20px;
+	line-height: 0px;
+	float: left;
+	margin: 2px;
+	list-style: none;
+}
+
+#navigation a {
+	padding:1px;
+	}
+	
+	
+
+	
+#content {
+	width:100%;
+	}
+	
+#footer {
+	width:100%;
+	border-top:  #000000 1px solid;
+	text-align:center;
+	font-size:9px;
+	}
+	
+
+

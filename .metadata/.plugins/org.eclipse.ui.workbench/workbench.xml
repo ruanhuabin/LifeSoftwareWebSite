@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="82" version="2.0">
+<workbenchAdvisor/>
+<window height="768" maximized="true" width="1024" x="524" y="191">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout>
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="124" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="com.genuitec.eclipse.j2eedt.core.ejb" itemType="typeToolBarContribution" x="55" y="22"/>
+<coolItem id="com.genuitec.eclipse.uml.actions" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="com.genuitec.eclipse.web20.actionset" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="com.genuitec.eclipse.ws.xfire.actions" itemType="typeToolBarContribution" x="95" y="22"/>
+<coolItem id="com.genuitec.myeclipse.actions.deploytools" itemType="typeToolBarContribution" x="101" y="22"/>
+<coolItem id="com.genuitec.myeclipse.actions.desktop" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="com.genuitec.myeclipse.actions.reporting" itemType="typeToolBarContribution" x="78" y="22"/>
+<coolItem id="com.genuitec.myeclipse.actions.screencapture" itemType="typeToolBarContribution" x="55" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="175" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="78" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="101" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="198" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="org.eclipse.jst.jsp.core.jspsource.source" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.genuitec.eclipse.webdesigner3.editors.html" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.css.core.csssource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.genuitec.eclipse.struts2.editor" itemType="typeToolBarContribution" x="342" y="22"/>
+<coolItem id="com.genuitec.eclipse.webdesigner3.editors.jsp" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.genuitec.eclipse.hibernate.editors.HibernateConfigXMLEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1501471821314" focus="true" label="Workspace - MyEclipse Java Enterprise">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+<part id="23"/>
+<part id="24"/>
+<part id="25"/>
+<part id="26"/>
+<part id="27"/>
+<part id="28"/>
+<part id="29"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Post.java" partName="Post.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/entity/Post.java" title="Post.java" tooltip="CryoEM/src/cn/edu/tsinghua/entity/Post.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/entity/Post.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1192" selectionTopPixel="330"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdminAction.java" partName="AdminAction.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/action/AdminAction.java" title="AdminAction.java" tooltip="CryoEM/src/cn/edu/tsinghua/action/AdminAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/action/AdminAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5041" selectionTopPixel="2760"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PostDAO.java" partName="PostDAO.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/service/PostDAO.java" title="PostDAO.java" tooltip="CryoEM/src/cn/edu/tsinghua/service/PostDAO.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/service/PostDAO.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="190" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CryoEMLogger.java" partName="CryoEMLogger.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/util/CryoEMLogger.java" title="CryoEMLogger.java" tooltip="CryoEM/src/cn/edu/tsinghua/util/CryoEMLogger.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/util/CryoEMLogger.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="156" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PostDAOImpl.java" partName="PostDAOImpl.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/serviceimpl/PostDAOImpl.java" title="PostDAOImpl.java" tooltip="CryoEM/src/cn/edu/tsinghua/serviceimpl/PostDAOImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/serviceimpl/PostDAOImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="394" selectionOffset="433" selectionTopPixel="87"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestPost.java" partName="TestPost.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/test/TestPost.java" title="TestPost.java" tooltip="CryoEM/src/cn/edu/tsinghua/test/TestPost.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/test/TestPost.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1319" selectionTopPixel="0"/>
+</editor>
+<editor id="com.genuitec.eclipse.hibernate.editors.HibernateConfigXMLEditor" name="hibernate.cfg.xml" partName="hibernate.cfg.xml" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/hibernate.cfg.xml" title="hibernate.cfg.xml" tooltip="CryoEM/src/hibernate.cfg.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/hibernate.cfg.xml"/>
+</editor>
+<editor id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Post.hbm.xml" partName="Post.hbm.xml" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/entity/Post.hbm.xml" title="Post.hbm.xml" tooltip="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/entity/Post.hbm.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/entity/Post.hbm.xml"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="download.jsp" partName="download.jsp" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/download.jsp" title="download.jsp" tooltip="CryoEM/WebRoot/download.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/download.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.struts2.editor" name="struts.xml" partName="struts.xml" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/struts.xml" title="struts.xml" tooltip="CryoEM/src/struts.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/struts.xml"/>
+</editor>
+<editor activePart="true" focus="true" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="admin.jsp" partName="admin.jsp" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/admin.jsp" title="admin.jsp" tooltip="CryoEM/WebRoot/admin.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/admin.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="software_upload_success.jsp" partName="software_upload_success.jsp" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/software_upload_success.jsp" title="software_upload_success.jsp" tooltip="CryoEM/WebRoot/software_upload_success.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/software_upload_success.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="index.jsp" partName="index.jsp" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/index.jsp" title="index.jsp" tooltip="CryoEM/WebRoot/index.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/index.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="software_post_success.jsp" partName="software_post_success.jsp" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/software_post_success.jsp" title="software_post_success.jsp" tooltip="CryoEM/WebRoot/software_post_success.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/software_post_success.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="software_post_error.jsp" partName="software_post_error.jsp" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/software_post_error.jsp" title="software_post_error.jsp" tooltip="CryoEM/WebRoot/software_post_error.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/software_post_error.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.editor.webapp30" name="web.xml" partName="web.xml" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/WEB-INF/web.xml" title="web.xml" tooltip="CryoEM/WebRoot/WEB-INF/web.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/WEB-INF/web.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserAction.java" partName="UserAction.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/action/UserAction.java" title="UserAction.java" tooltip="CryoEM/src/cn/edu/tsinghua/action/UserAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/action/UserAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="991" selectionTopPixel="0"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="list_software.jsp" partName="list_software.jsp" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/list_software.jsp" title="list_software.jsp" tooltip="CryoEM/WebRoot/list_software.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/list_software.jsp"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="style.css.bak" partName="style.css.bak" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/style.css.bak" title="style.css.bak" tooltip="CryoEM/WebRoot/style.css.bak" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/style.css.bak"/>
+<editorState selectionHorizontalPixel="0" selectionLength="73" selectionOffset="759" selectionTopPixel="540"/>
+</editor>
+<editor id="org.eclipse.wst.css.core.csssource.source" name="style.css" partName="style.css" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/style.css" title="style.css" tooltip="CryoEM/WebRoot/style.css" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/style.css"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="704" selectionTopPixel="180"/>
+</editor>
+<editor id="org.eclipse.wst.css.core.csssource.source" name="style3.css" partName="style3.css" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/style3.css" title="style3.css" tooltip="CryoEM/WebRoot/style3.css" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/style3.css"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="1009"/>
+</editor>
+<editor id="org.eclipse.wst.css.core.csssource.source" name="style2.css" partName="style2.css" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/style2.css" title="style2.css" tooltip="CryoEM/WebRoot/style2.css" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/style2.css"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3073" selectionTopPixel="2764"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="software_post.jsp" partName="software_post.jsp" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/software_post.jsp" title="software_post.jsp" tooltip="CryoEM/WebRoot/software_post.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/software_post.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="page_template.jsp" partName="page_template.jsp" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/page_template.jsp" title="page_template.jsp" tooltip="CryoEM/WebRoot/page_template.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/page_template.jsp"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="admin_login.jsp" partName="admin_login.jsp" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/admin_login.jsp" title="admin_login.jsp" tooltip="CryoEM/WebRoot/admin_login.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/admin_login.jsp"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Admin.java" partName="Admin.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/entity/Admin.java" title="Admin.java" tooltip="CryoEM/src/cn/edu/tsinghua/entity/Admin.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/entity/Admin.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="644" selectionTopPixel="0"/>
+</editor>
+<editor id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Admin.hbm.xml" partName="Admin.hbm.xml" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/entity/Admin.hbm.xml" title="Admin.hbm.xml" tooltip="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/entity/Admin.hbm.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/entity/Admin.hbm.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdminDAO.java" partName="AdminDAO.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/service/AdminDAO.java" title="AdminDAO.java" tooltip="CryoEM/src/cn/edu/tsinghua/service/AdminDAO.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/service/AdminDAO.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="170" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdminDAOImpl.java" partName="AdminDAOImpl.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/serviceimpl/AdminDAOImpl.java" title="AdminDAOImpl.java" tooltip="CryoEM/src/cn/edu/tsinghua/serviceimpl/AdminDAOImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/serviceimpl/AdminDAOImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1408" selectionTopPixel="387"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestAdmin.java" partName="TestAdmin.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/test/TestAdmin.java" title="TestAdmin.java" tooltip="CryoEM/src/cn/edu/tsinghua/test/TestAdmin.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/test/TestAdmin.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1102" selectionTopPixel="0"/>
+</editor>
+</editors>
+<views>
+<view id="com.genuitec.eclipse.ui.HTMLView" partName="Web Browser"/>
+<view id="org.eclipse.jdt.junit.ResultView" partName="JUnit">
+<viewState failuresOnly="false" layout="1" orientation="2" ratio="105" scroll="false" time="true"/>
+</view>
+<view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" partName="Snippets"/>
+<view id="com.genuitec.eclipse.ast.deploy.core.serverview" partName="Servers">
+<viewState/>
+</view>
+<view id="uky.article.imageviewer.views.ImageView" partName="Image Preview">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Type Hierarchy"/>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Warnings (38 items)"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
+<customFilters userDefinedPatternsEnabled="false">
+<xmlDefinedFilters>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+<child filterId="org.eclipse.m2e.MavenModuleFilter" isEnabled="false"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+</views>
+<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.genuitec.myeclipse.perspective.MyEclipsePerspectiveFactory" id="com.genuitec.myeclipse.perspective.myeclipseperspective" label="MyEclipse Java Enterprise"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.test.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.desktop"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.screencapture"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.examples.actionSet"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.hibernatetools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.webtools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.j2eedt.core.ejb"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.jsftools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.faceletstools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.maven.pro.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.jpatools"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.portlet.portletactions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.reporting"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.springtools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.strutstools"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.actions.restsupport"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.ws.xfire.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.icefaces"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.about.actions"/>
+<alwaysOnActionSet id="com.genuitec.myeclipse.product.actions"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.aop.ui.ActionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.aop.ui.matcher.actionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.ui.actionSet"/>
+<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.search.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.uml.actions"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.uml2.ui.actions"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.profileActionSet"/>
+<alwaysOnActionSet id="com.genuitec.eclipse.web20.actionset"/>
+<show_view_action id="com.genuitec.eclipse.ast.deploy.core.serverview"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="uky.article.imageviewer.views.ImageView"/>
+<show_view_action id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="com.genuitec.eclipse.ui.HTMLView"/>
+<new_wizard_action id="com.genuitec.eclipse.j2eedt.ui.wizard.EJBProjectCreationWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.j2eedt.ui.wizard.NewEARProjectWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.j2eedt.ui.wizard.WebProjectCreationWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.ws.xfire.wizards.NewXFireWebProjectWizard1"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="com.aston.wizards.applet.NewAppletCreationWizard"/>
+<new_wizard_action id="com.aston.wizards.html.NewHtmlCreationWizard"/>
+<new_wizard_action id="com.aston.wizards.jsp.NewJspCreationWizard"/>
+<new_wizard_action id="com.aston.wizards.xhtml.NewXhtmlCreationWizard"/>
+<new_wizard_action id="com.aston.wizards.servlet.NewServletCreationWizard"/>
+<new_wizard_action id="org.jboss.ide.eclipse.jdt.j2ee.ui.wizards.ejb.NewSessionEJBWizard"/>
+<new_wizard_action id="org.jboss.ide.eclipse.jdt.j2ee.ui.wizards.ejb.NewEntityEJBWizard"/>
+<new_wizard_action id="org.jboss.ide.eclipse.jdt.j2ee.ui.wizards.ejb.NewMessageDrivenEJBWizard"/>
+<new_wizard_action id="com.aston.wizards.xml.NewXmlCreationWizard"/>
+<new_wizard_action id="org.eclipse.wst.xml.ui.internal.wizards.NewXMLWizard"/>
+<new_wizard_action id="org.eclipse.wst.xsd.ui.internal.wizards.NewXSDWizard"/>
+<new_wizard_action id="com.genuitec.eclipse.struts.org.easystruts.eclipse.wizards.NewFormCreationWizardX1_1"/>
+<new_wizard_action id="com.genuitec.eclipse.struts.org.easystruts.eclipse.wizards.NewActionCreationWizardX1_1"/>
+<new_wizard_action id="com.genuitec.eclipse.dehory.newformwizard"/>
+<new_wizard_action id="com.genuitec.eclipse.reporting.projectwizard"/>
+<new_wizard_action id="com.genuitec.eclipse.uml.wizard.NewUMLModelFileWizard"/>
+<perspective_action id="com.genuitec.eclipse.dehory.dehoryperspective"/>
+<perspective_action id="com.genuitec.eclipse.hibernate.perspective.HibernatePerspective"/>
+<perspective_action id="com.genuitec.eclipse.imageeditor.perspective"/>
+<perspective_action id="com.genuitec.dali.adapter.persistencePerspective"/>
+<perspective_action id="com.genuitec.eclipse.reporting.ReportPerspective"/>
+<perspective_action id="com.genuitec.eclipse.sqlexplorer.perspectives.SQLExplorerPluginPerspective"/>
+<perspective_action id="com.genuitec.eclipse.uml.umlPerspective"/>
+<perspective_action id="com.genuitec.eclipse.web20.perspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<view id="uky.article.imageviewer.views.ImageView"/>
+<view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.jdt.junit.ResultView"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="com.genuitec.eclipse.ui.HTMLView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="com.genuitec.eclipse.ast.deploy.core.serverview"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="cvslocation">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="cvslocation">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.16605553" ratioLeft="317" ratioRight="1592" relationship="2" relative="cvslocation"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@365a384a" ratio="0.72570723" ratioLeft="1180" ratioRight="446" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@5d259e26" ratio="0.54953563" ratioLeft="355" ratioRight="291" relationship="4" relative="org.eclipse.ui.internal.ViewStack@365a384a">
+<folder activePageID="org.eclipse.jdt.junit.ResultView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="JUnit"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="bottom" ratio="0.5784946" ratioLeft="538" ratioRight="392" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="com.genuitec.eclipse.ui.HTMLView" label="Web Browser"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="com.genuitec.eclipse.ast.deploy.core.serverview" label="Servers"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="topleft" ratio="0.3993808" ratioLeft="258" ratioRight="388" relationship="4" relative="cvslocation">
+<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="Type Hierarchy"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="bottomleft" ratio="0.78172046" ratioLeft="727" ratioRight="203" relationship="4" relative="topleft">
+<folder activePageID="uky.article.imageviewer.views.ImageView" appearance="2" expanded="2">
+<page content="uky.article.imageviewer.views.ImageView" label="Image Preview"/>
+<page content="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" label="Snippets"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CryoEM/src/cn/edu/tsinghua/entity/Admin.java"/>
+<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/CryoEM/src/cn/edu/tsinghua/entity/Admin.hbm.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CryoEM/src/cn/edu/tsinghua/action/AdminAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CryoEM/src/cn/edu/tsinghua/service/AdminDAO.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CryoEM/src/cn/edu/tsinghua/serviceimpl/AdminDAOImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CryoEM/src/cn/edu/tsinghua/test/TestPost.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CryoEM/src/cn/edu/tsinghua/serviceimpl/PostDAOImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CryoEM/src/cn/edu/tsinghua/test/TestAdmin.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" path="/CryoEM/src/struts.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/CryoEM/WebRoot/admin_login.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/CryoEM/WebRoot/list_software.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/CryoEM/WebRoot/page_template.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/CryoEM/WebRoot/admin.jsp"/>
+</editors>
+<item historyLabel="AdminDAO.java" index="3">
+<position info="not_deleted" x="144" y="0"/>
+</item>
+<item historyLabel="PostDAOImpl.java" index="6">
+<position info="not_deleted" x="820" y="0"/>
+</item>
+<item historyLabel="AdminDAO.java" index="3">
+<position info="not_deleted" x="170" y="0"/>
+</item>
+<item historyLabel="AdminDAOImpl.java" index="4">
+<position/>
+</item>
+<item historyLabel="AdminDAOImpl.java" index="4">
+<position/>
+</item>
+<item historyLabel="PostDAOImpl.java" index="6">
+<position info="not_deleted" x="433" y="394"/>
+</item>
+<item historyLabel="AdminDAOImpl.java" index="4">
+<position info="not_deleted" x="1408" y="0"/>
+</item>
+<item historyLabel="TestPost.java" index="5">
+<position info="not_deleted" x="1319" y="0"/>
+</item>
+<item historyLabel="TestAdmin.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TestAdmin.java" index="7">
+<position info="not_deleted" x="833" y="0"/>
+</item>
+<item historyLabel="TestAdmin.java" index="7">
+<position info="not_deleted" x="822" y="0"/>
+</item>
+<item historyLabel="TestAdmin.java" index="7">
+<position info="not_deleted" x="832" y="0"/>
+</item>
+<item historyLabel="TestAdmin.java" index="7">
+<position info="not_deleted" x="905" y="0"/>
+</item>
+<item historyLabel="TestAdmin.java" index="7">
+<position info="not_deleted" x="1001" y="0"/>
+</item>
+<item historyLabel="TestAdmin.java" index="7">
+<position info="not_deleted" x="990" y="0"/>
+</item>
+<item historyLabel="TestAdmin.java" index="7">
+<position info="not_deleted" x="1000" y="0"/>
+</item>
+<item historyLabel="TestAdmin.java" index="7">
+<position info="not_deleted" x="1100" y="0"/>
+</item>
+<item historyLabel="TestAdmin.java" index="7">
+<position info="not_deleted" x="1105" y="0"/>
+</item>
+<item historyLabel="TestAdmin.java" index="7">
+<position info="not_deleted" x="846" y="0"/>
+</item>
+<item historyLabel="Admin.hbm.xml" index="1"/>
+<item historyLabel="Admin.java" index="0">
+<position info="not_deleted" x="667" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="2">
+<position info="not_deleted" x="5602" y="0"/>
+</item>
+<item historyLabel="Admin.java" index="0">
+<position info="not_deleted" x="644" y="0"/>
+</item>
+<item historyLabel="Admin.hbm.xml" index="1"/>
+<item historyLabel="TestAdmin.java" index="7">
+<position info="not_deleted" x="1102" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="2">
+<position info="not_deleted" x="5602" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="2">
+<position info="not_deleted" x="5271" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="2">
+<position info="not_deleted" x="5599" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="2">
+<position info="not_deleted" x="5382" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="2">
+<position info="not_deleted" x="5430" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="2">
+<position info="not_deleted" x="5595" y="0"/>
+</item>
+<item historyLabel="struts.xml" index="8"/>
+<item historyLabel="AdminAction.java" index="2">
+<position info="not_deleted" x="5595" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="2">
+<position info="not_deleted" x="5561" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="2">
+<position info="not_deleted" x="5560" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="2">
+<position info="not_deleted" x="5595" y="0"/>
+</item>
+<item historyLabel="admin_login.jsp" index="9"/>
+<item historyLabel="list_software.jsp" index="10"/>
+<item historyLabel="page_template.jsp" index="11"/>
+<item historyLabel="admin_login.jsp" index="9"/>
+<item historyLabel="list_software.jsp" index="10"/>
+<item historyLabel="admin_login.jsp" index="9">
+<position info="not_deleted" x="2302" y="18"/>
+</item>
+<item historyLabel="AdminAction.java" index="2">
+<position info="not_deleted" x="5595" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="2">
+<position info="not_deleted" x="4985" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="2">
+<position info="not_deleted" x="5041" y="0"/>
+</item>
+<item historyLabel="struts.xml" index="8"/>
+<item historyLabel="admin_login.jsp" index="9"/>
+<item historyLabel="admin.jsp" index="12"/>
+<item historyLabel="admin_login.jsp" index="9"/>
+<item active="true" historyLabel="admin.jsp" index="12"/>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestAdmin.java" tooltip="CryoEM/src/cn/edu/tsinghua/test/TestAdmin.java">
+<persistable path="/CryoEM/src/cn/edu/tsinghua/test/TestAdmin.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdminDAOImpl.java" tooltip="CryoEM/src/cn/edu/tsinghua/serviceimpl/AdminDAOImpl.java">
+<persistable path="/CryoEM/src/cn/edu/tsinghua/serviceimpl/AdminDAOImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdminDAO.java" tooltip="CryoEM/src/cn/edu/tsinghua/service/AdminDAO.java">
+<persistable path="/CryoEM/src/cn/edu/tsinghua/service/AdminDAO.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" name="Admin.hbm.xml" tooltip="CryoEM/src/cn/edu/tsinghua/entity/Admin.hbm.xml">
+<persistable path="/CryoEM/src/cn/edu/tsinghua/entity/Admin.hbm.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Admin.java" tooltip="CryoEM/src/cn/edu/tsinghua/entity/Admin.java">
+<persistable path="/CryoEM/src/cn/edu/tsinghua/entity/Admin.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="admin_login.jsp" tooltip="CryoEM/WebRoot/admin_login.jsp">
+<persistable path="/CryoEM/WebRoot/admin_login.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="page_template.jsp" tooltip="CryoEM/WebRoot/page_template.jsp">
+<persistable path="/CryoEM/WebRoot/page_template.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="software_post.jsp" tooltip="CryoEM/WebRoot/software_post.jsp">
+<persistable path="/CryoEM/WebRoot/software_post.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="style2.css" tooltip="CryoEM/WebRoot/style2.css">
+<persistable path="/CryoEM/WebRoot/style2.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="style3.css" tooltip="CryoEM/WebRoot/style3.css">
+<persistable path="/CryoEM/WebRoot/style3.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.css.core.csssource.source" name="style.css" tooltip="CryoEM/WebRoot/style.css">
+<persistable path="/CryoEM/WebRoot/style.css"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="style.css.bak" tooltip="CryoEM/WebRoot/style.css.bak">
+<persistable path="/CryoEM/WebRoot/style.css.bak"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="list_software.jsp" tooltip="CryoEM/WebRoot/list_software.jsp">
+<persistable path="/CryoEM/WebRoot/list_software.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserAction.java" tooltip="CryoEM/src/cn/edu/tsinghua/action/UserAction.java">
+<persistable path="/CryoEM/src/cn/edu/tsinghua/action/UserAction.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.editor.webapp30" name="web.xml" tooltip="CryoEM/WebRoot/WEB-INF/web.xml">
+<persistable path="/CryoEM/WebRoot/WEB-INF/web.xml"/>
+</file>
+</mruList>
+</workbench>

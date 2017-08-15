@@ -1,0 +1,7 @@
+package cn.edu.tsinghua.serviceimpl;
+
+import cn.edu.tsinghua.service.CategoryL1DAO;
+
+public class CategoryL1DAOImpl implements CategoryL1DAO{
+
+}

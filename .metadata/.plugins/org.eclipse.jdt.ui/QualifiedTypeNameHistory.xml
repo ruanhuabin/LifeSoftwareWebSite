@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.hibernate.Transaction"/>
+<fullyQualifiedTypeName name="cn.edu.tsinghua.db.MyHibernateSessionFactory"/>
+<fullyQualifiedTypeName name="org.hibernate.Session"/>
+<fullyQualifiedTypeName name="cn.edu.tsinghua.entity.Post"/>
+<fullyQualifiedTypeName name="cn.edu.tsinghua.service.PostDAO"/>
+<fullyQualifiedTypeName name="org.hibernate.Query"/>
+<fullyQualifiedTypeName name="cn.edu.tsinghua.serviceimpl.PostDAOImpl"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="cn.edu.tsinghua.service.AdminDAO"/>
+<fullyQualifiedTypeName name="cn.edu.tsinghua.serviceimpl.AdminDAOImpl"/>
+<fullyQualifiedTypeName name="cn.edu.tsinghua.entity.Admin"/>
+</qualifiedTypeNameHistroy>

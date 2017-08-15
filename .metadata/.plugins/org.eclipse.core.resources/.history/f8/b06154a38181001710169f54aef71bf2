@@ -1,0 +1,11 @@
+package cn.edu.tsinghua.entity;
+
+public class CatagoryL2 {
+	private String parentCatagoryName;
+	private String categoryName;
+
+	
+	
+	
+
+}

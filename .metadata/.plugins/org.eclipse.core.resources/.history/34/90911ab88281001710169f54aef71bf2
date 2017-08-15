@@ -1,0 +1,10 @@
+package cn.edu.tsinghua.service;
+
+import java.util.List;
+
+import cn.edu.tsinghua.entity.Post;
+
+public interface CategoryL1DAO {	
+	public boolean addL1Category();	
+	public List<CategoryL1> listAllL1Category();
+}

@@ -1,0 +1,24 @@
+1502679811573	Copy compilation unit
+1502681742060	Rename local variable 'c2SubCatagory'
+1502681750564	Rename local variable 'c1SubCatagory'
+1502775593234	Move compilation units
+1502775841393	Copy file
+1502775916508	Copy file
+1502776069201	Copy file
+1502776274690	Rename type 'CatagoryL1'
+1502776286488	Rename field 'catagoryName'
+1502776310620	Rename type 'Catagory'
+1502776320133	Rename type 'SubCatagory'
+1502776347726	Rename resource 'CatagoryL1.hbm.xml'
+1502776400398	Rename method 'getSubCatogories'
+1502776404886	Rename method 'setSubCatogories'
+1502776417131	Rename type 'SubSubCatagory'
+1502776724158	Rename resource 'add_catagory.jsp'
+1502777997336	Rename local variable 'parentCatagoryName'
+1502778351600	Copy compilation unit
+1502778428726	Copy compilation unit
+1502778477671	Rename type 'CatagoryL2'
+1502778503173	Rename resource 'CatagoryL2.hbm.xml'
+1502786557490	Rename method 'getCatatoryResult'
+1502787276249	Rename field 'subCatogories'
+1502787306615	Rename field 'subSubCatagories'

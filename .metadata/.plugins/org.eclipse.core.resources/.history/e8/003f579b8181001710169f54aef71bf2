@@ -1,0 +1,22 @@
+package cn.edu.tsinghua.entity;
+
+public class CatagoryL2 {
+	private String parentCatagoryName;
+	private String catagoryName;
+
+	public String getCategoryName() {
+		return catagoryName;
+	}
+
+	public void setCategoryName(String catagoryName) {
+		this.catagoryName = catagoryName;
+	}
+
+	@Override
+	public String toString() {
+		return "CatagoryL2 [catagoryName=" + catagoryName + "]";
+	}
+	
+	
+
+}

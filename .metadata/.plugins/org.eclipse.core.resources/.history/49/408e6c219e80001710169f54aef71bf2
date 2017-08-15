@@ -1,0 +1,10 @@
+package cn.edu.tsinghua.entity;
+
+import java.util.List;
+
+public class SubCatagory {
+	private int sid; //Used for achor
+	private String title;
+	private List<SubSubCatagory> subSubCatagories;
+
+}

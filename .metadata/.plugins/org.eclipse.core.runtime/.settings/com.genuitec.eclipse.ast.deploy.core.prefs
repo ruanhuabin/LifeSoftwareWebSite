@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+tomcat7Server.CryoEM.IEARProjectName=
+tomcat7Server.CryoEM.altContextRoot=
+tomcat7Server.CryoEM.contextRoot=/CryoEM
+tomcat7Server.CryoEM.deployIsOverProject=false
+tomcat7Server.CryoEM.deploymentPath=D\:\\Tomcat7.0\\webapps\\CryoEM
+tomcat7Server.CryoEM.isDeployed=true
+tomcat7Server.CryoEM.isExploded=true
+tomcat7Server.CryoEM.isUptoDate=true
+tomcat7Server.CryoEM.noFileCopy=false
+tomcat7Server.CryoEM.shouldBackup=false
+tomcat7Server.CryoEM.shouldOverwrite=false
+tomcat7Server.CryoEM.type=WebDeployment

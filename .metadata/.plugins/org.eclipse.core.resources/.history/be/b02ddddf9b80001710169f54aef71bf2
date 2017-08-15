@@ -1,0 +1,8 @@
+package cn.edu.tsinghua.entity;
+
+public class SubSubCatagory {
+	
+	private int ssid;
+	private String title;
+
+}
