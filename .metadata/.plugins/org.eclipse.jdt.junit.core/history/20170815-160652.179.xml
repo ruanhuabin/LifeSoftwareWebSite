@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testrun name="TestPost.testAddPost" project="CryoEM" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="testAddPost" classname="cn.edu.tsinghua.test.TestPost" time="0.869"/>
+</testrun>

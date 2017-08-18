@@ -23,7 +23,7 @@ import org.apache.struts2.ServletActionContext;
 
 import cn.edu.tsinghua.entity.CategoryL1;
 import cn.edu.tsinghua.entity.Post;
-import cn.edu.tsinghua.po.Category;
+import cn.edu.tsinghua.po.CategoryL2;
 import cn.edu.tsinghua.po.SubCategory;
 import cn.edu.tsinghua.po.SubSubCategory;
 import cn.edu.tsinghua.service.CategoryL1DAO;
@@ -46,7 +46,7 @@ public class UserAction extends SuperAction {
 		logger.info("all post info: " + allPost);
 		
 		
-		List<Category> catagories2 = getCatetoryResult(allPost);
+		List<CategoryL2> catagories2 = getCatetoryResult(allPost);
 		
 		logger.info("catagories2 = " + catagories2);
 		
@@ -66,10 +66,10 @@ public class UserAction extends SuperAction {
 		public boolean isAddedToCatagory = false;
 		
 	}
-	private SubCatagoryWrapper getSubCatagory(List<Category> catagories, String catagoryName, String subCatagoryName)	
+	private SubCatagoryWrapper getSubCatagory(List<CategoryL2> catagories, String catagoryName, String subCatagoryName)	
 	{
 		SubCatagoryWrapper subCatagoryWrapper = new SubCatagoryWrapper();
-		for(Category c: catagories)
+		for(CategoryL2 c: catagories)
 		{
 			List<SubCategory> subCatagories = c.getSubCategories();
 			if(!catagoryName.equals(c.getTitle()))
@@ -96,7 +96,7 @@ public class UserAction extends SuperAction {
 		
 	}
 	
-	private List<Category> getCatetoryResult(List<Post> allPost)
+	private List<CategoryL2> getCatetoryResult(List<Post> allPost)
 	{
 //		String strCatagories[] = {"CryoEM", "Protein", "General"};
 //		List<Category> catagories = new ArrayList<Category>();
@@ -112,12 +112,12 @@ public class UserAction extends SuperAction {
 		CategoryL1DAO cl1DAO = new CategoryL1DAOImpl();
 		List<CategoryL1> cl1s = cl1DAO.listAllL1Category();
 		
-		List<Category> catagories = new ArrayList<Category>();
+		List<CategoryL2> catagories = new ArrayList<CategoryL2>();
 		
 		for(CategoryL1 cl1: cl1s)
 		{
 			String categoryName = cl1.getCategoryName();			
-			Category c = new Category();
+			CategoryL2 c = new CategoryL2();
 			c.setTitle(categoryName);			
 			catagories.add(c);			
 		}
@@ -127,9 +127,9 @@ public class UserAction extends SuperAction {
 			String cName = p.getCatagory();
 			String scName = p.getSubCatagory();
 			
-			Category currCatagory = null;
+			CategoryL2 currCatagory = null;
 			//Check which catagory this post belongs to
-			for(Category c: catagories)
+			for(CategoryL2 c: catagories)
 			{
 				if(cName.equals(c.getTitle()))
 				{
@@ -178,7 +178,7 @@ public class UserAction extends SuperAction {
 		
 		//set the catagory's cid to the first subcatagory's sid
 		
-		for(Category c: catagories)
+		for(CategoryL2 c: catagories)
 		{
 			for(SubCategory s: c.getSubCategories())
 			{

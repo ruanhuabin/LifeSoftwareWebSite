@@ -22,3 +22,7 @@
 1502786557490	Rename method 'getCatatoryResult'
 1502787276249	Rename field 'subCatogories'
 1502787306615	Rename field 'subSubCatagories'
+1503026698594	Copy file
+1503026737893	Copy file
+1503028328878	Rename local variable 'subCatagories'
+1503045514815	Rename type 'Category'

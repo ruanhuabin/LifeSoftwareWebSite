@@ -12,10 +12,13 @@ import org.hibernate.tool.hbm2ddl.SchemaExport;
 import org.junit.Test;
 
 import cn.edu.tsinghua.entity.Post;
-import cn.edu.tsinghua.po.Category;
+import cn.edu.tsinghua.entity.CategoryL2;
+
 import cn.edu.tsinghua.po.SubCategory;
 import cn.edu.tsinghua.po.SubSubCategory;
+import cn.edu.tsinghua.service.CategoryL2DAO;
 import cn.edu.tsinghua.service.PostDAO;
+import cn.edu.tsinghua.serviceimpl.CategoryL2DAOImpl;
 import cn.edu.tsinghua.serviceimpl.PostDAOImpl;
 
 
@@ -27,7 +30,7 @@ public class TestCatogory {
 	public void testConstructCatagory()
 	{		
 		
-		Category c1 = new Category();
+		cn.edu.tsinghua.po.CategoryL2 c1 = new cn.edu.tsinghua.po.CategoryL2();
 		c1.setTitle("CryoEM");
 		
 		List<SubCategory> c1SubCatagories = new ArrayList<SubCategory>();
@@ -67,7 +70,7 @@ public class TestCatogory {
 		
 		
 		
-		Category c2 = new Category();
+		cn.edu.tsinghua.po.CategoryL2 c2 = new cn.edu.tsinghua.po.CategoryL2();
 		c2.setTitle("protein");
 		
 		List<SubCategory> c2SubCatagories = new ArrayList<SubCategory>();
@@ -85,22 +88,29 @@ public class TestCatogory {
 		
 		c2.setSubCategories(c2SubCatagories);
 		
-		List<Category> catagories = new ArrayList<Category>();
+		List<cn.edu.tsinghua.po.CategoryL2> catagories = new ArrayList<cn.edu.tsinghua.po.CategoryL2>();
 		catagories.add(c1);
 		catagories.add(c2);
 		
 		logger.info("catagories =" + catagories);
 		
+	}
+	
+	@Test
+	public void testAddSubCategory()
+	{		
 		
+		CategoryL2 sc1 = new CategoryL2();
+		sc1.setParentCategoryName("CryoEM");
+		sc1.setCategoryName("CryoEM_S1");
 		
+		CategoryL2 sc2 = new CategoryL2();
+		sc2.setParentCategoryName("CryoEM");
+		sc2.setCategoryName("CryoEM_S2");
 		
-		
-		
-		
-		
-		
-		
-		
+		CategoryL2DAO c2DAO = new CategoryL2DAOImpl();
+		c2DAO.addL2Category(sc1);
+		c2DAO.addL2Category(sc2);
 		
 	}
 }

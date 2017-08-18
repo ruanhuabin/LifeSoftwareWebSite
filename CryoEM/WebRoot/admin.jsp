@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -22,8 +23,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </style>
 </head>
 <body>
- 
-
 
 <div id="main-container">
 	
@@ -38,7 +37,62 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<li><a href="http://10.10.32.133/qa">Forum</a></li>		
 	</ul>
 </div>
+
+
 <script type="text/javascript">
+
+/* var dat = document.getElementById("list1").value.toString();
+alert(dat); */
+
+	
+	function selCity()
+	{
+		var arr= new Array();
+		/* <s:iterator value="#request.allL1Category" id="catagory">
+			arr.push(["<s:property value="#catagory.categoryName"/>"]);
+		</s:iterator> */
+		var index = 0;
+		<s:iterator value="#request.allL2Category" id="catagory">
+			arr[index] = new Array();
+			
+			<s:iterator value="#catagory" id="item">
+				arr[index].push("<s:property value="#item"/>");
+			</s:iterator>
+			index ++;
+			/* arr.push(["<s:property value="#catagory"/>"]); */
+		</s:iterator>
+           
+		/* var arr = [["----select city----"]
+                   ,['dongcheng', 'xicheng','chongwen']
+                   ,['heping','hedong', 'hexi']
+				,['pudong','lujiazui', 'xinshiji']
+                   ];  */
+                   
+          //alert("array= " + arr);			
+		
+           /*拿到省份的索引*/
+           var index = document.getElementById("categorySelect").selectedIndex;
+           /*拿到省份数组中对应的城市*/
+           var citys = arr[index]; 
+           
+           /*拿到子菜单节点*/
+           var subselNode = document.getElementById("subCategoryID");
+           /*移除子菜单中的城市， 注意：循环时不要“i++”,因为循环条件在递减，若在进行i++，会产生删除不干净的错误
+           */
+           for(var i=1; i<subselNode.options.length; )
+		   {
+               subselNode.removeChild(subselNode.options[i]);
+           }
+           for(var i=0; i<citys.length; i++)
+		   {	
+               /*创建节点*/
+               var optNode = document.createElement("option");
+               /*拿出数组对应的城市*/
+               optNode.innerText = citys[i];
+               /*将城市添加到子菜单中*/
+               subselNode.appendChild(optNode);
+           }
+      }
 
 	function validate()
     {
@@ -97,6 +151,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <div style="clear:both"></div>
 
+
+<br/>
+    
+
+
 <button title="click to generate an URL for file downloading"onclick="genURL()">Generate File URL</button>
 <button  title="click to create a new catagory" onclick="genCategory()">Create New Category</button>
 
@@ -105,7 +164,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<form action="post/Admin_postSoftware.action"	enctype="multipart/form-data" method="post" style="" title="" id="" class="">
 		  Title: <input type="text" name="title"/> 
 		  Category: 
-		  <select name="category">
+		  <select id="categorySelect"  name="category" onchange="selCity()">
 		  <s:iterator value="#request.allL1Category" id="catagory">
 		  
 		  <s:if test="#catagory.categoryName.equals('General')">
@@ -115,10 +174,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            <option value="<s:property value="#catagory.categoryName"/>"><s:property value="#catagory.categoryName"/></option>
         </s:else>
 			  
-			  
+		  
 			  			  
 		  </s:iterator>
 		  </select>
+		  
+		  SubCategory: 
+		  <select id="subCategoryID" name="subCategory">
+        	<option selected="selected">----Please Select Sub Category----</option>
+       		<option></option>
+    	  </select>	
 		  <input type="file" name="yourFile" /> 
 		  <br />
 		  <br />

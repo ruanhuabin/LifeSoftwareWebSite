@@ -11,14 +11,18 @@ import java.net.URLDecoder;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.apache.struts2.ServletActionContext;
+
+import com.mysql.fabric.xmlrpc.base.Array;
 
 import cn.edu.tsinghua.entity.Admin;
 import cn.edu.tsinghua.entity.CategoryL1;
@@ -44,6 +48,9 @@ public class AdminAction extends SuperAction {
 	private String userFileFileName;
 	private String userFileContentType;
 	private File userFile;
+	
+	
+	private ArrayList<String> list;
 
 	
 
@@ -259,12 +266,56 @@ public class AdminAction extends SuperAction {
 		logger.info("all category is: " + allCategory);
 		
 		request.setAttribute("allL1Category", allCategory);
+		
+		
+		List<Vector<String>> subCategories = new ArrayList<Vector<String>>();
+		Vector<String> s1 = new Vector<String>();
+		s1.add("11");
+		s1.add("12");
+		s1.add("13");
+		
+		Vector<String> s2 = new Vector<String>();
+		s2.add("21");
+		s2.add("22");
+		s2.add("23");
+		
+		Vector<String> s3 = new Vector<String>();
+		s3.add("31");
+		s3.add("32");
+		s3.add("33");
+		
+		subCategories.add(s1);
+		subCategories.add(s2);
+		subCategories.add(s3);
+		request.setAttribute("allL2Category", subCategories);
+		
+		logger.info("AllL2Category = " + subCategories);
+		
+		List<String> subCategories2 = new ArrayList<String>();
+		subCategories2.add("abc");
+		subCategories2.add("def");
+		subCategories2.add("hij");
+		logger.info("AllL3Category = " + subCategories2);
+		request.setAttribute("allL3Category", subCategories2);
+
+		
+		
+		
+		
+		
+		
 		if(admin != null)
 			return "load_admin_page";
 		else
 			return "load_admin_login_page";
 	}
 	
+	public ArrayList<String> getList() {
+		return list;
+	}
+	public void setList(ArrayList<String> list) {
+		this.list = list;
+	}
 	public String adminLogin()
 	{
 		
