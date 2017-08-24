@@ -1,0 +1,18 @@
+package cn.edu.tsinghua.service;
+
+import java.util.List;
+
+
+
+
+
+public interface PostPageDataDAO {
+	public PostPageData getDevicePageData(int pageSize, int page);
+	public PostPageData getDevicePageDataByCondition(int pageSize, int page, String condition, String keywordFilter);
+	List<Devices> queryByPage(String hql, int offset, int pageSize);
+	public PostPageData getDevicePageDataByDeviceStatus(int pageSize, int page,
+			String statusCondition);
+	public PostPageData getDevicePageDataByBindStatus(int pageSize, int page,
+			String bindCondition);
+
+}

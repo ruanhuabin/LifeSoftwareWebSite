@@ -9,5 +9,6 @@ import cn.edu.tsinghua.entity.Post;
 public interface CategoryL2DAO {
 	boolean addL2Category(CategoryL2 cl2);	
 	public List<CategoryL2> listAllL2Category();
+	boolean isCategoryExist(CategoryL2 c2);
 	
 }

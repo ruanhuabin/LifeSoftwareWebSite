@@ -22,7 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	#navigation .curr{background:url(sub/images/nav_on.png); color:red;} /* 点击后的样式 */ 
 </style>
 </head>
-<body>
+<body onload="selCity()">
 
 <div id="main-container">
 	
@@ -145,6 +145,11 @@ alert(dat); */
 	 {
    		 window.open("<%=basePath%>add_category.jsp", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=300,left=400,width=600,height=600");
 	}
+	
+	function genSubCategory()
+	 {
+   		 window.open("<%=basePath%>post/Admin_toSubCategory.action", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=300,left=400,width=600,height=600");
+	}
 
 </script>
 
@@ -153,47 +158,67 @@ alert(dat); */
 
 
 <br/>
-    
+ 
+<div style="width: 100%;">
+	<div style="float:left; width: 18%">
+		<p><a href="<%=path%>/post/Admin_toAdmin.action">Create New Post</a></p>
+		<p><a href="<%=path%>/post/Admin_toPostManage.action">Manage Posts</a></p>
+		<p><a href="<%=path%>/Admin_toCategoryManage.action">Manage Categories</a></p>
+		<p><a href="<%=path%>/Admin_toSubCategoryManage.action">Manage Sub Categories</a></p>		
+	</div>
+	
+	<div style="float:right; width:82%">
+		<button title="click to generate an URL for file downloading"onclick="genURL()">Generate File URL</button>
+		<button  title="click to create a new catagory" onclick="genCategory()">Create New Category</button>
+		<button  title="click to create a new sub catagory" onclick="genSubCategory()">Create New Sub Category</button>
+		<div class="form-div">
+			<form action="post/Admin_postSoftware.action"	enctype="multipart/form-data" method="post" style="" title="" id="" class="">
+				  Title:<s:textfield name="title" required="true"></s:textfield>
+				  <!--  <input type="text" name="title"/>  -->
+				  <br/>
+				  <br/>
+				  Category: 
+				  <select id="categorySelect"  name="category" onclick="selCity()">
+				  <s:iterator value="#request.allL1Category" id="catagory">
+				  
+				  <s:if test="#catagory.categoryName.equals('General')">
+		            <option selected="selected" value="<s:property value="#catagory.categoryName"/>"><s:property value="#catagory.categoryName"/></option>
+		        </s:if>        
+		        <s:else>
+		           <option value="<s:property value="#catagory.categoryName"/>"><s:property value="#catagory.categoryName"/></option>
+		        </s:else>
+					  
+				  
+					  			  
+				  </s:iterator>
+				  </select>
+				  
+				  <br/>
+				  <br/>
+				  SubCategory: 
+				  <select id="subCategoryID" name="subCategory">
+		        	<option selected="selected">----Please Select Sub Category----</option>
+		       		
+		    	  </select>	
+		    	  <br/>
+		    	  <br/>
+				  <!-- <input type="file" name="yourFile" />  -->
+				  <s:file name="yourFile" required="true"></s:file>
+				  <br />
+				  <br />
+				  Description:
+				  <br />    
+				  <!-- <textarea rows="20" cols="80" name="description"></textarea> -->
+				  <s:textarea rows="20" cols="80" required="true" name="description"> </s:textarea>
+				  <br/>			  
+				  <input type="submit" value="submit" onclick="return validate1()"/>
+			</form>
+		</div>
 
+	</div>
+</div> 
 
-<button title="click to generate an URL for file downloading"onclick="genURL()">Generate File URL</button>
-<button  title="click to create a new catagory" onclick="genCategory()">Create New Category</button>
-
-
-<div class="form-div">
-	<form action="post/Admin_postSoftware.action"	enctype="multipart/form-data" method="post" style="" title="" id="" class="">
-		  Title: <input type="text" name="title"/> 
-		  Category: 
-		  <select id="categorySelect"  name="category" onchange="selCity()">
-		  <s:iterator value="#request.allL1Category" id="catagory">
-		  
-		  <s:if test="#catagory.categoryName.equals('General')">
-            <option selected="selected" value="<s:property value="#catagory.categoryName"/>"><s:property value="#catagory.categoryName"/></option>
-        </s:if>        
-        <s:else>
-           <option value="<s:property value="#catagory.categoryName"/>"><s:property value="#catagory.categoryName"/></option>
-        </s:else>
-			  
-		  
-			  			  
-		  </s:iterator>
-		  </select>
-		  
-		  SubCategory: 
-		  <select id="subCategoryID" name="subCategory">
-        	<option selected="selected">----Please Select Sub Category----</option>
-       		<option></option>
-    	  </select>	
-		  <input type="file" name="yourFile" /> 
-		  <br />
-		  <br />
-		  Description:
-		  <br />    
-		  <textarea rows="20" cols="80" name="description"></textarea>
-		  <br/>			  
-		  <input type="submit" value="submit" onclick="return validate()"/>
-	</form>
-</div>
+<div style="clear:both"></div>
 
 <div id="footer">&copy; 2017 <a href="mailto:ruanhuabin@tsinghua.edu.cn">Huabin Ruan</a> | Design By <a href="#">Huabin Ruan</a> </div>
 </div>

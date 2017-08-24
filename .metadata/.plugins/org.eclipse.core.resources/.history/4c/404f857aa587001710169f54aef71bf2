@@ -1,0 +1,49 @@
+package cn.edu.tsinghua.serviceimpl;
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import cn.edu.tsinghua.db.MyHibernateSessionFactory;
+import cn.edu.tsinghua.entity.Post;
+import cn.edu.tsinghua.entity.PostPageData;
+import cn.edu.tsinghua.service.PostDAO;
+import cn.edu.tsinghua.service.PostPageDataDAO;
+
+
+
+public class PostPageDataDAOImpl implements PostPageDataDAO {
+	
+	private PostDAO postDAO = new PostDAOImpl();
+
+	@Override
+	public PostPageData getPostPageData(int pageSize, int pageIndex) 
+	{
+		// TODO Auto-generated method stub
+		
+		PostPageData pageBean = new PostPageData();
+        
+        int allRows = postDAO.getTotalRowNum();
+        
+        int totalPage = pageBean.getTotalPages(pageSize, allRows);
+        
+        int currentPage = pageBean.getCurPage(pageIndex);
+        
+        int offset = pageBean.getCurrentPageOffset(pageSize, currentPage);
+        
+        List<Post> list = postDAO.getPostDataByPageIndex(offset, pageSize);
+        
+        //logger.info("post list = " + list);
+        
+        pageBean.setList(list);
+        pageBean.setAllRows(allRows);
+        pageBean.setCurrentPage(currentPage);
+        pageBean.setTotalPage(totalPage);
+		return pageBean;
+	}
+	
+	
+	
+
+}

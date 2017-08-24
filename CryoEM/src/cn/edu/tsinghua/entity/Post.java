@@ -8,6 +8,9 @@ public class Post {
 	
 	private String catagory;
 	private String subCatagory;
+	
+	
+	private String softwareFileName;//This attribute is only used for display in web page
 
 	
 	public int getPid() {
@@ -49,6 +52,14 @@ public class Post {
 		this.subCatagory = subCatagory;
 	}
 	
+	
+	
+	public String getSoftwareFileName() {
+		return softwareFileName;
+	}
+	public void setSoftwareFileName(String softwareFileName) {
+		this.softwareFileName = softwareFileName;
+	}
 	@Override
 	public String toString() {
 		return "Post [pid=" + pid + ", title=" + title + ", description="

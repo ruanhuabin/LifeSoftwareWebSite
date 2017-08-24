@@ -75,4 +75,43 @@ public class CategoryL2DAOImpl implements CategoryL2DAO{
 		}
 	}
 
+	@Override
+	public boolean isCategoryExist(CategoryL2 c2) {
+		// TODO Auto-generated method stub
+		Transaction tx = null;
+		try{
+			Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
+			tx = session.beginTransaction();
+			String hql = "from CategoryL2 where parentCategoryName=? and categoryName=?";
+			Query query = session.createQuery(hql);
+			query.setParameter(0,  c2.getParentCategoryName());
+			query.setParameter(1,  c2.getCategoryName());
+			
+			List list = query.list();
+			tx.commit();
+			
+			if(list.size() > 0)
+				return true;
+			else			
+				return false;
+				
+		}
+		catch(Exception ex)
+		{
+			
+			ex.printStackTrace();
+			return false;
+		}
+		finally
+		{
+			if(tx != null)
+			{
+
+				tx = null;
+			}
+			
+			
+		}
+	}
+
 }

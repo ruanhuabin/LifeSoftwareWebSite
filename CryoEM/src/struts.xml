@@ -5,11 +5,11 @@
 
 <struts>   
 
-    <package name="default" namespace="/" extends="struts-default">	   
-    </package>
-    
+    <package name="default" namespace="/" extends="struts-default"> </package>    
     
     <constant name="struts.multipart.maxSize" value="1073741824"/>
+    <constant name="struts.i18n.encoding" value="utf-8"></constant>
+    
     <package name="admin" namespace="/post" extends="default">
     	<action name="*_*" class="cn.edu.tsinghua.action.{1}Action" method="{2}">
     		
@@ -57,6 +57,46 @@
         <result name="add_category_failed">
         	/add_category.jsp
         </result>
+        
+        <result name="to_subcategory_success">
+        	/add_sub_category.jsp
+        </result>
+        
+        <result name="add_sub_category_success">
+        	/add_sub_category.jsp
+        </result>
+        
+        <result name="add_sub_category_failed">
+        	/add_sub_category.jsp
+        </result>
+        
+        <result name="to_post_manage_success">
+        	/manage_post.jsp
+        </result>
+        
+        <result name="view_post_success">
+        	/edit_post.jsp
+        </result>
+        
+         <result name="update_post_success">
+        	/edit_post.jsp
+        </result>
+        
+         <result name="update_post_failed">
+        	/edit_post.jsp
+        </result>
+        
+        <result name="delete_post_success" type="redirectAction">Admin_toPostManage.action?pageNum=${pageNumForPost}</result>
+        
+        <result name="get_page_data_success">
+        	/manage_post.jsp
+        </result>
+        
+        <result name="test_login_success">
+        	/test.jsp
+        </result>
+        
+        
 	    	
 	  <!--   <interceptor-ref name="defaultStack">
 	    	<param name="fileUpload.maximumSize">1073741824</param>

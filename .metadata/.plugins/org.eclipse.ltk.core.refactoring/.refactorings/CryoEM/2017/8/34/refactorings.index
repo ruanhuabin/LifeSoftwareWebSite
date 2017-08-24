@@ -1,0 +1,19 @@
+1503304056186	Copy file
+1503305555721	Copy compilation unit
+1503373525490	Copy file
+1503373699868	Copy file
+1503379171796	Rename local variable 'categoryName'
+1503379281561	Rename local variable 'parentCategory'
+1503451225388	Rename type 'DeviceDataPage'
+1503452383622	Rename field 'deviceDAO'
+1503452395893	Rename local variable 'page'
+1503452514326	Rename method 'queryByPage'
+1503453067917	Rename local variable 'pageBean'
+1503453911830	Rename local variable 'pageIndex'
+1503455551920	Copy file
+1503465210300	Copy file
+1503465233348	Rename resource 'editPost.jsp'
+1503468704660	Rename local variable 'pid'
+1503472672433	Rename field 'pageNum'
+1503474419110	Extract method 'loadCategoryAndSubCategory'
+1503562696197	Extract method 'writeUploadFile'

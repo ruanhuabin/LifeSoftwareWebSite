@@ -1,0 +1,9 @@
+package cn.edu.tsinghua.service;
+
+import cn.edu.tsinghua.entity.PostPageData;
+public interface PostPageDataDAO {
+	public PostPageData getPostPageData(int pageIndex);	
+	
+	
+
+}

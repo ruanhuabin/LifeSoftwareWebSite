@@ -1,0 +1,91 @@
+package cn.edu.tsinghua.serviceimpl;
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import cn.edu.tsinghua.db.MyHibernateSessionFactory;
+import cn.edu.tsinghua.entity.Post;
+import cn.edu.tsinghua.entity.PostPageData;
+import cn.edu.tsinghua.service.PostDAO;
+import cn.edu.tsinghua.service.PostPageDataDAO;
+
+
+
+public class PostPageDataDAOImpl implements PostPageDataDAO {
+	
+	private PostDAO postDAO = new PostDAOImpl();
+
+	@Override
+	public PostPageData getPostPageData(int pageSize, int pageIndex) 
+	{
+		// TODO Auto-generated method stub
+		
+		PostPageData pageBean = new PostPageData();
+        
+        String hql = "from Post";
+        
+        int allRows = postDAO.getTotalRowNum();
+        
+        int totalPage = pageBean.getTotalPages(pageSize, allRows);
+        
+        int currentPage = pageBean.getCurPage(pageIndex);
+        
+        int offset = pageBean.getCurrentPageOffset(pageSize, currentPage);
+        
+        List<Post> list = queryByPage(hql, offset, pageSize);
+        
+        System.out.println("post list = " + list);
+        
+        pageBean.setList(list);
+        pageBean.setAllRows(allRows);
+        pageBean.setCurrentPage(currentPage);
+        pageBean.setTotalPage(totalPage);
+		return pageBean;
+	}
+	
+	@Override
+	public List<Post> queryByPage(String hql, int offset, int pageSize) {
+		// TODO Auto-generated method stub
+		
+		
+		Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
+        Transaction tx = null;
+        List<Post> list = null;
+        
+        try
+        {
+            tx = session.beginTransaction();
+            
+            Query query = session.createQuery(hql).setFirstResult(offset).setMaxResults(pageSize);
+            
+            list = query.list();
+            
+            tx.commit();
+            
+        }
+        catch (Exception e)
+        {
+            if(tx != null)
+            {
+                tx.rollback();
+            }
+            
+            e.printStackTrace();
+        }
+        finally
+        {
+        	if(tx != null)
+            {
+                tx = null;
+            }
+        }
+        
+        
+        return list;
+	}
+
+	
+
+}

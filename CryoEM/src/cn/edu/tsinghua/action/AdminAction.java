@@ -26,13 +26,20 @@ import com.mysql.fabric.xmlrpc.base.Array;
 
 import cn.edu.tsinghua.entity.Admin;
 import cn.edu.tsinghua.entity.CategoryL1;
+import cn.edu.tsinghua.entity.CategoryL2;
 import cn.edu.tsinghua.entity.Post;
+import cn.edu.tsinghua.entity.PostPageData;
+import cn.edu.tsinghua.po.SubCategory;
 import cn.edu.tsinghua.service.AdminDAO;
 import cn.edu.tsinghua.service.CategoryL1DAO;
+import cn.edu.tsinghua.service.CategoryL2DAO;
 import cn.edu.tsinghua.service.PostDAO;
+import cn.edu.tsinghua.service.PostPageDataDAO;
 import cn.edu.tsinghua.serviceimpl.AdminDAOImpl;
 import cn.edu.tsinghua.serviceimpl.CategoryL1DAOImpl;
+import cn.edu.tsinghua.serviceimpl.CategoryL2DAOImpl;
 import cn.edu.tsinghua.serviceimpl.PostDAOImpl;
+import cn.edu.tsinghua.serviceimpl.PostPageDataDAOImpl;
 
 
 public class AdminAction extends SuperAction {
@@ -51,6 +58,8 @@ public class AdminAction extends SuperAction {
 	
 	
 	private ArrayList<String> list;
+	
+	private int pageNumForPost;
 
 	
 
@@ -99,6 +108,14 @@ public class AdminAction extends SuperAction {
 	}
 	public void setUserFile(File userFile) {
 		this.userFile = userFile;
+	}
+	
+	
+	public int getPageNumForPost() {
+		return pageNumForPost;
+	}
+	public void setPageNumForPost(int pageNum) {
+		this.pageNumForPost = pageNum;
 	}
 	public String upload() {
 
@@ -171,19 +188,6 @@ public class AdminAction extends SuperAction {
 		logger.info("upload filen name : " + this.yourFileFileName);
 		logger.info("upload file type = " + this.yourFileContentType);
 
-		String path = ServletActionContext.getServletContext().getRealPath(uploadDir);
-
-		logger.info("file will be saved to path: " + path);
-
-		File dir = new File(path);
-		if (!dir.exists())
-		{
-			dir.mkdir();
-		}
-
-		BufferedInputStream bis = null;
-		BufferedOutputStream bos = null;
-
 		String newFileName;
 		long now = new Date().getTime();
 
@@ -194,16 +198,44 @@ public class AdminAction extends SuperAction {
 		String description = request.getParameter("description");
 		String softwareURI = "/CryoEM/post/download.action?f=" + newFileName;
 		String category = request.getParameter("category");
+		String subCategory = request.getParameter("subCategory");
+		
+		if(subCategory.equals("----Please Select Sub Category----"))
+		{
+			subCategory = null;
+		}
 		
 		logger.info("post title: " + title);
 		logger.info("post description: " + description);
 		logger.info("post category:" + category);
+		logger.info("post sub category:" + subCategory);
 		
+		writeUploadFile(newFileName);
 		
+		Post p = new Post();
+		p.setTitle(title);
+		p.setDescription(description);
+		p.setSoftwareURI(softwareURI);
+		p.setCatagory(category);
+		p.setSubCatagory(subCategory);
+		p.setSoftwareFileName(this.yourFileFileName);
+		PostDAO pDAO = new PostDAOImpl();
+		pDAO.addPost(p);
 		
-		
+		return "software_post_success";
+	}
+	private void writeUploadFile(String newFileName) {
+		BufferedInputStream bis = null;
+		BufferedOutputStream bos = null;
 
 		try {
+			String path = ServletActionContext.getServletContext().getRealPath(uploadDir);
+			logger.info("file will be saved to path: " + path);			
+			File dir = new File(path);
+			if (!dir.exists())
+			{
+				dir.mkdir();
+			}
 			FileInputStream fis = new FileInputStream(yourFile);
 			bis = new BufferedInputStream(fis);
 			FileOutputStream fos = new FileOutputStream(new File(dir, newFileName));
@@ -221,7 +253,6 @@ public class AdminAction extends SuperAction {
 		} catch (Exception e)
 		{
 			e.printStackTrace();
-			return "software_post_error";
 					
 		} finally
 		{
@@ -243,16 +274,6 @@ public class AdminAction extends SuperAction {
 				e2.printStackTrace();
 			}
 		}
-		
-		Post p = new Post();
-		p.setTitle(title);
-		p.setDescription(description);
-		p.setSoftwareURI(softwareURI);
-		p.setCatagory(category);
-		PostDAO pDAO = new PostDAOImpl();
-		pDAO.addPost(p);
-		
-		return "software_post_success";
 	}
 	
 	
@@ -260,36 +281,30 @@ public class AdminAction extends SuperAction {
 	{			
 		Admin admin = (Admin)session.getAttribute("adminInfo");
 		
-		/*Load all categories so that admin page can list all category name in select widget*/
-		CategoryL1DAO cl1DAO = new CategoryL1DAOImpl();
-		List<CategoryL1> allCategory = cl1DAO.listAllL1Category();
-		logger.info("all category is: " + allCategory);
+		loadCategoryAndSubCategory();
 		
-		request.setAttribute("allL1Category", allCategory);
-		
-		
-		List<Vector<String>> subCategories = new ArrayList<Vector<String>>();
-		Vector<String> s1 = new Vector<String>();
-		s1.add("11");
-		s1.add("12");
-		s1.add("13");
-		
-		Vector<String> s2 = new Vector<String>();
-		s2.add("21");
-		s2.add("22");
-		s2.add("23");
-		
-		Vector<String> s3 = new Vector<String>();
-		s3.add("31");
-		s3.add("32");
-		s3.add("33");
-		
-		subCategories.add(s1);
-		subCategories.add(s2);
-		subCategories.add(s3);
-		request.setAttribute("allL2Category", subCategories);
-		
-		logger.info("AllL2Category = " + subCategories);
+//		List<Vector<String>> subCategories = new ArrayList<Vector<String>>();
+//		Vector<String> s1 = new Vector<String>();
+//		s1.add("11");
+//		s1.add("12");
+//		s1.add("13");
+//		
+//		Vector<String> s2 = new Vector<String>();
+//		s2.add("21");
+//		s2.add("22");
+//		s2.add("23");
+//		
+//		Vector<String> s3 = new Vector<String>();
+//		s3.add("31");
+//		s3.add("32");
+//		s3.add("33");
+//		
+//		subCategories.add(s1);
+//		subCategories.add(s2);
+//		subCategories.add(s3);
+//		request.setAttribute("allL2Category", subCategories);
+//		
+//		logger.info("AllL2Category = " + subCategories);
 		
 		List<String> subCategories2 = new ArrayList<String>();
 		subCategories2.add("abc");
@@ -297,17 +312,46 @@ public class AdminAction extends SuperAction {
 		subCategories2.add("hij");
 		logger.info("AllL3Category = " + subCategories2);
 		request.setAttribute("allL3Category", subCategories2);
-
-		
-		
-		
-		
 		
 		
 		if(admin != null)
 			return "load_admin_page";
 		else
 			return "load_admin_login_page";
+	}
+	private void loadCategoryAndSubCategory() {
+		/*Load all categories so that admin page can list all category name in select widget*/
+		CategoryL1DAO cl1DAO = new CategoryL1DAOImpl();
+		List<CategoryL1> allCategory = cl1DAO.listAllL1Category();
+		logger.info("all category is: " + allCategory);
+		
+		request.setAttribute("allL1Category", allCategory);
+		
+		CategoryL2DAO allSubCategoryDAO = new CategoryL2DAOImpl();
+		List<CategoryL2> allSubCategory = allSubCategoryDAO.listAllL2Category();
+		logger.info("all sub category is: " + allSubCategory);
+		
+		List<Vector<String>> newSubCategories = new ArrayList<Vector<String>>();
+		
+		for(CategoryL1 cl1:allCategory)
+		{
+			Vector<String> currSubCategory = new Vector<String>();
+			for(CategoryL2 cl2: allSubCategory)
+			{
+				String parent = cl2.getParentCategoryName();
+				String child = cl2.getCategoryName();
+				
+				if(parent.equals(cl1.getCategoryName()))
+				{
+					currSubCategory.add(child);
+				}
+			}
+			
+			newSubCategories.add(currSubCategory);
+		}
+		
+		request.setAttribute("allL2Category", newSubCategories);
+		logger.info("AllL2Category = " + newSubCategories);
 	}
 	
 	public ArrayList<String> getList() {
@@ -331,12 +375,7 @@ public class AdminAction extends SuperAction {
 		{
 			session.setAttribute("adminInfo", admin);
 			
-			/*Load all categories so that admin page can list all category name in select widget*/
-			CategoryL1DAO cl1DAO = new CategoryL1DAOImpl();
-			List<CategoryL1> allCategory = cl1DAO.listAllL1Category();
-			logger.info("all category is: " + allCategory);
-			
-			request.setAttribute("allL1Category", allCategory);
+			loadCategoryAndSubCategory();
 			
 			
 			return "admin_login_success";
@@ -461,6 +500,194 @@ public class AdminAction extends SuperAction {
 		}	
 		
 	}
+	
+	public String toSubCategory()
+	{
+		CategoryL1DAO cl1DAO = new CategoryL1DAOImpl();
+		
+		List<CategoryL1> categories = cl1DAO.listAllL1Category();
+		
+		request.setAttribute("allL1Categories", categories);
+		return "to_subcategory_success";
+	}
 
+	
+	public String addSubCategory()
+	{
+		String parentCategoryName = request.getParameter("parentCategory");
+		String subCategoryName = request.getParameter("subCategory");
+		CategoryL2 c2 = new CategoryL2();
+		c2.setParentCategoryName(parentCategoryName);
+		c2.setCategoryName(subCategoryName);
+		
+		logger.info("parent category name: " + parentCategoryName);
+		logger.info("sub category name: " + subCategoryName);
+		
+		
+		CategoryL1DAO cl1DAO = new CategoryL1DAOImpl();		
+		List<CategoryL1> categories = cl1DAO.listAllL1Category();		
+		request.setAttribute("allL1Categories", categories);
+		
+		
+		
+		CategoryL2DAO categoryL2DAO = new CategoryL2DAOImpl();
+		
+		if(categoryL2DAO.isCategoryExist(c2))
+		{
+			request.setAttribute("addSubCategoryResult", "Failed: Category [ " + parentCategoryName + " , " + subCategoryName + " ] is already exist");
+			return "add_sub_category_failed";
+		}
+		
+		boolean result = categoryL2DAO.addL2Category(c2);
+
+		if(result == true)
+		{
+			request.setAttribute("addSubCategoryResult", "Add category [" + parentCategoryName + " , " + subCategoryName + " ] success");
+			return "add_sub_category_success";
+		}
+		else
+		{
+			request.setAttribute("addSubCategoryResult", "Create Category [ " + parentCategoryName + " , " +  subCategoryName + " ] failed, ask adminstrator for help");
+			return "add_sub_category_failed";
+			
+		}	
+		
+	}
+	
+	public String toPostManage()
+	{
+		String pageNumStr = request.getParameter("pageNum");
+		int pageNum = 1;
+		if(pageNumStr != null)
+		{
+			pageNum = Integer.parseInt(pageNumStr);
+		}
+		
+		
+		PostPageDataDAO ppdDAO = new PostPageDataDAOImpl();	
+		
+		PostPageData postPageData = ppdDAO.getPostPageData(pageNum);
+		logger.info("pageNum: " + pageNum);
+		logger.info("postPageData = " + postPageData);
+		logger.info("postPageDataSize = " + postPageData.getList().size());
+		request.setAttribute("postPageData", postPageData);
+		return "to_post_manage_success";
+	}
+	
+	public String editPost()
+	{
+		String pidStr = request.getParameter("pid");
+		logger.info("view pidStr = " + pidStr);
+		
+		int pid = 0;
+		if(pidStr != null)
+		{
+			pid = Integer.parseInt(pidStr);
+		}
+		logger.info("pid = " + pid);
+		
+		loadCategoryAndSubCategory();
+		
+		PostDAO pDAO = new PostDAOImpl();
+		Post p = pDAO.getPost(pid);
+		
+		request.setAttribute("postToEdit", p);
+		return "view_post_success";
+	}
+	
+	public String deletePost()
+	{
+		String pidStr = request.getParameter("pid");
+		logger.info("delete pid = " + pidStr);
+		int pid = Integer.parseInt(pidStr);		
+		PostDAO postDAO = new PostDAOImpl();
+		postDAO.deletePost(pid);
+		
+		String pageNumStr = request.getParameter("pageNum");
+		logger.info("pageNumStr = " + pageNumStr);
+		if(pageNumStr == null)
+			pageNumStr = "1";
+		
+		this.setPageNumForPost(Integer.parseInt(pageNumStr));
+		
+		return "delete_post_success";
+	}
+	
+	public String getPageData()
+	{
+		
+		String pageNumStr = request.getParameter("pageNum");
+		int pageNum = 1;
+		if(pageNumStr != null)
+		{
+			pageNum = Integer.parseInt(pageNumStr);
+		}
+		
+		
+		PostPageDataDAO ppdDAO = new PostPageDataDAOImpl();	
+		
+		PostPageData postPageData = ppdDAO.getPostPageData(pageNum);
+		logger.info("pageNum: " + pageNum);
+		logger.info("postPageData = " + postPageData);
+		logger.info("postPageDataSize = " + postPageData.getList().size());
+		request.setAttribute("postPageData", postPageData);
+		return "get_page_data_success";
+		
+		
+	}
+	
+	public String updatePost()
+	{
+		String pidStr = request.getParameter("pid");
+		int pid = Integer.parseInt(pidStr);
+		String title = request.getParameter("title");
+		String description = request.getParameter("description");
+		String category = request.getParameter("category");
+		String subCategory = request.getParameter("subCategory");
+		
+		
+		
+		if(subCategory.equals("----Please Select Sub Category----"))
+		{
+			subCategory = null;
+		}
+		
+		PostDAO pDAO = new PostDAOImpl();
+		Post p = pDAO.getPost(pid);
+		p.setTitle(title);
+		p.setDescription(description);
+		p.setCatagory(category);
+		p.setSubCatagory(subCategory);
+		
+		
+		if(this.yourFile != null)
+		{
+			String newFileName;
+			long now = new Date().getTime();
+
+			newFileName = Long.toString(now) + "_" + yourFileFileName;
+			logger.info("rename uploaded file to: " + newFileName);	
+			String softwareURI = "/CryoEM/post/download.action?f=" + newFileName;
+			p.setSoftwareURI(softwareURI);
+			p.setSoftwareFileName(this.yourFileFileName);
+			writeUploadFile(newFileName);
+		}
+		
+		
+		boolean result = pDAO.updatePost(p);
+		request.setAttribute("postToEdit", p);
+		loadCategoryAndSubCategory();
+		
+		if(result)
+		{
+			request.setAttribute("updatePostResult", "Update Successed");
+			return "update_post_success";
+		}
+		else
+		{
+			request.setAttribute("updatePostResult", "Update Failed");
+			return "update_post_failed";
+		}
+	}
 	
 }

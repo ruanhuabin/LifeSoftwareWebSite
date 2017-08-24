@@ -1,0 +1,29 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<s:include value="header.jsp"/>
+
+<div class="form-div">
+ <form action="<%=basePath%>post/Admin_addSubCategory.action" enctype="multipart/form-data" method="post">    
+      <s:select list="">
+      </s:select>
+      Sub Category Name: <s type="text" name="subCategory" /> 
+      <input type="submit" id="id_submit" name="nm_submit" value="submit" />    
+  </form>
+  
+  <p><s:property value="#request.addCategoryResult"/></p>
+  <br />
+  <br />
+  Download URL: 
+  <br />
+  <br /> 
+  <textarea rows="5" cols="50" name="description"><s:property value="#request.user_file_URL"/></textarea>
+  
+</div> 
+
+</body>
+</html>
