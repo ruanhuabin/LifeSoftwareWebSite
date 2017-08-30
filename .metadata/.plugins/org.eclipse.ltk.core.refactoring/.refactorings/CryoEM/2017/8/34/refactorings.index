@@ -17,3 +17,18 @@
 1503472672433	Rename field 'pageNum'
 1503474419110	Extract method 'loadCategoryAndSubCategory'
 1503562696197	Extract method 'writeUploadFile'
+1503631235945	Copy file
+1503640605456	Copy file
+1503640861166	Copy file
+1503641019073	Copy file
+1503642129978	Copy compilation unit
+1503642220708	Copy compilation unit
+1503642272767	Copy compilation unit
+1503642842682	Rename method 'getPostDataByPageIndex'
+1503642926344	Rename local variable 'postPageData'
+1503643688584	Rename local variable 'postPageData'
+1503643846860	Rename field 'postDAO'
+1503644199697	Rename method 'getCategoryL1DataByPageIndex'
+1503644618966	Rename local variable 'postPageData'
+1503646706830	Rename local variable 'pidStr'
+1503646893119	Rename local variable 'p'

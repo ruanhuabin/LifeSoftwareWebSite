@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <form action="<%=basePath%>post/Admin_addSubCategory.action" enctype="multipart/form-data" method="post">    
       Parent Category: 
       <select name="parentCategory" >
-      	<s:iterator value="#request.allL1Categories" id="categories">
+      	<s:iterator value="#request.parentCategories" id="categories">
       		<option><s:property value="#categories.categoryName"/></option>
       	</s:iterator>
       </select>

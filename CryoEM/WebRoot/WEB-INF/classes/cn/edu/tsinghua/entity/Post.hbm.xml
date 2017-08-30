@@ -12,7 +12,7 @@
 -->
 
 <hibernate-mapping>
-	<class name="cn.edu.tsinghua.entity.Post"  table="POST">		
+	<class name="cn.edu.tsinghua.entity.Post"  table="post">		
 		<id name="pid" type="int">
 			<generator class="native"/>
 		</id>		

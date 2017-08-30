@@ -12,7 +12,7 @@
 -->
 
 <hibernate-mapping>
-	<class name="cn.edu.tsinghua.entity.Admin"  table="ADMIN">		
+	<class name="cn.edu.tsinghua.entity.Admin"  table="admin">		
 		<id name="username" type="java.lang.String">
 			<generator class="assigned"/>
 		</id>	

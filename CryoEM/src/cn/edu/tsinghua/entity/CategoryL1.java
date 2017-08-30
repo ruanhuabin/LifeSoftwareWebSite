@@ -1,7 +1,18 @@
 package cn.edu.tsinghua.entity;
 
 public class CategoryL1 {
+	private int cid;
 	private String categoryName;
+	
+	
+
+	public int getCid() {
+		return cid;
+	}
+
+	public void setCid(int cid) {
+		this.cid = cid;
+	}
 
 	public String getCategoryName() {
 		return categoryName;

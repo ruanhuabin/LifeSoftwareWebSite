@@ -136,7 +136,7 @@ alert(dat); */
 		index_plist.init();
 		
 		
-	function genURL()
+	<%-- function genURL()
 	{
    		 window.open("<%=basePath%>gen_file_download_url.jsp", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=300,left=400,width=600,height=400");
 	}
@@ -150,7 +150,7 @@ alert(dat); */
 	 {
    		 window.open("<%=basePath%>post/Admin_toSubCategory.action", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=300,left=400,width=600,height=600");
 	}
-
+ --%>
 </script>
 
 
@@ -161,16 +161,14 @@ alert(dat); */
  
 <div style="width: 100%;">
 	<div style="float:left; width: 18%">
-		<p><a href="<%=path%>/post/Admin_toAdmin.action">Create New Post</a></p>
-		<p><a href="<%=path%>/post/Admin_toPostManage.action">Manage Posts</a></p>
-		<p><a href="<%=path%>/Admin_toCategoryManage.action">Manage Categories</a></p>
-		<p><a href="<%=path%>/Admin_toSubCategoryManage.action">Manage Sub Categories</a></p>		
+		<s:include value="admin_left_menu.jsp"></s:include>		
 	</div>
 	
 	<div style="float:right; width:82%">
-		<button title="click to generate an URL for file downloading"onclick="genURL()">Generate File URL</button>
+		<!-- <button title="click to generate an URL for file downloading"onclick="genURL()">Generate File URL</button>
 		<button  title="click to create a new catagory" onclick="genCategory()">Create New Category</button>
-		<button  title="click to create a new sub catagory" onclick="genSubCategory()">Create New Sub Category</button>
+		<button  title="click to create a new sub catagory" onclick="genSubCategory()">Create New Sub Category</button> -->
+		<s:include value="button_tool.jsp"></s:include>
 		<div class="form-div">
 			<form action="post/Admin_postSoftware.action"	enctype="multipart/form-data" method="post" style="" title="" id="" class="">
 				  Title:<s:textfield name="title" required="true"></s:textfield>

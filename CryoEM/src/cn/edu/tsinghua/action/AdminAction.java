@@ -20,6 +20,9 @@ import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/*import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+*/
 import org.apache.struts2.ServletActionContext;
 
 import com.mysql.fabric.xmlrpc.base.Array;
@@ -27,24 +30,31 @@ import com.mysql.fabric.xmlrpc.base.Array;
 import cn.edu.tsinghua.entity.Admin;
 import cn.edu.tsinghua.entity.CategoryL1;
 import cn.edu.tsinghua.entity.CategoryL2;
+import cn.edu.tsinghua.entity.CategoryPageData;
 import cn.edu.tsinghua.entity.Post;
 import cn.edu.tsinghua.entity.PostPageData;
+import cn.edu.tsinghua.entity.SubCategoryPageData;
 import cn.edu.tsinghua.po.SubCategory;
 import cn.edu.tsinghua.service.AdminDAO;
 import cn.edu.tsinghua.service.CategoryL1DAO;
 import cn.edu.tsinghua.service.CategoryL2DAO;
+import cn.edu.tsinghua.service.CategoryPageDataDAO;
 import cn.edu.tsinghua.service.PostDAO;
 import cn.edu.tsinghua.service.PostPageDataDAO;
+import cn.edu.tsinghua.service.SubCategoryPageDataDAO;
 import cn.edu.tsinghua.serviceimpl.AdminDAOImpl;
 import cn.edu.tsinghua.serviceimpl.CategoryL1DAOImpl;
 import cn.edu.tsinghua.serviceimpl.CategoryL2DAOImpl;
+import cn.edu.tsinghua.serviceimpl.CategoryPageDataDAOImpl;
 import cn.edu.tsinghua.serviceimpl.PostDAOImpl;
 import cn.edu.tsinghua.serviceimpl.PostPageDataDAOImpl;
+import cn.edu.tsinghua.serviceimpl.SubCategoryPageDataDAOImpl;
 
 
 public class AdminAction extends SuperAction {
 	
 	private static final Logger logger = Logger.getLogger("AdminLogger");
+	//private static final Logger logger = LogManager.getLogger(AdminAction.class);
 	
 	private String yourFileFileName;
 	private String yourFileContentType;
@@ -60,6 +70,9 @@ public class AdminAction extends SuperAction {
 	private ArrayList<String> list;
 	
 	private int pageNumForPost;
+	
+	private PostPageData postPageData ;
+	private CategoryPageData categoryPageData;
 
 	
 
@@ -117,6 +130,22 @@ public class AdminAction extends SuperAction {
 	public void setPageNumForPost(int pageNum) {
 		this.pageNumForPost = pageNum;
 	}
+	
+	
+	public PostPageData getPostPageData() {
+		return postPageData;
+	}
+	public void setPostPageData(PostPageData postPageData) {
+		this.postPageData = postPageData;
+	}
+	
+	
+	public CategoryPageData getCategoryPageData() {
+		return categoryPageData;
+	}
+	public void setCategoryPageData(CategoryPageData categoryPageData) {
+		this.categoryPageData = categoryPageData;
+	}
 	public String upload() {
 
 		logger.info("filename = " + this.yourFileFileName);
@@ -125,11 +154,19 @@ public class AdminAction extends SuperAction {
 		String path = ServletActionContext.getServletContext().getRealPath(
 				uploadDir);
 
-		logger.info("path = " + path);
-
-		File dir = new File(path);
-		if (!dir.exists())
-			dir.mkdir();
+		logger.info("path = " + path);				
+		File dir = new File(uploadDir);
+		if(!dir.exists())
+		{
+			if(dir.mkdir())
+			{
+				logger.info("Create upload dir [ " + uploadDir + " ] success");
+			}
+			else
+			{
+				logger.warning("Create upload dir [ " + uploadDir + " ] failed");
+			}
+		}
 
 		BufferedInputStream bis = null;
 		BufferedOutputStream bos = null;
@@ -506,8 +543,9 @@ public class AdminAction extends SuperAction {
 		CategoryL1DAO cl1DAO = new CategoryL1DAOImpl();
 		
 		List<CategoryL1> categories = cl1DAO.listAllL1Category();
+		logger.info("L1 Categories: " + categories);
 		
-		request.setAttribute("allL1Categories", categories);
+		request.setAttribute("parentCategories", categories);
 		return "to_subcategory_success";
 	}
 
@@ -526,13 +564,13 @@ public class AdminAction extends SuperAction {
 		
 		CategoryL1DAO cl1DAO = new CategoryL1DAOImpl();		
 		List<CategoryL1> categories = cl1DAO.listAllL1Category();		
-		request.setAttribute("allL1Categories", categories);
+		request.setAttribute("parentCategories", categories);
 		
 		
 		
 		CategoryL2DAO categoryL2DAO = new CategoryL2DAOImpl();
 		
-		if(categoryL2DAO.isCategoryExist(c2))
+		if(categoryL2DAO.isSubCategoryExist(c2))
 		{
 			request.setAttribute("addSubCategoryResult", "Failed: Category [ " + parentCategoryName + " , " + subCategoryName + " ] is already exist");
 			return "add_sub_category_failed";
@@ -567,6 +605,7 @@ public class AdminAction extends SuperAction {
 		PostPageDataDAO ppdDAO = new PostPageDataDAOImpl();	
 		
 		PostPageData postPageData = ppdDAO.getPostPageData(pageNum);
+		this.postPageData = postPageData;
 		logger.info("pageNum: " + pageNum);
 		logger.info("postPageData = " + postPageData);
 		logger.info("postPageDataSize = " + postPageData.getList().size());
@@ -595,6 +634,45 @@ public class AdminAction extends SuperAction {
 		return "view_post_success";
 	}
 	
+	
+	public String editCategory()
+	{
+		
+		String cid = request.getParameter("cid");
+		String pageNum = request.getParameter("pageNum");
+		String categoryName = request.getParameter("categoryName");
+		logger.info("cid to view: " + cid);
+		logger.info("pageNum to view: " + pageNum);
+		logger.info("category name to view: " + categoryName);
+		request.setAttribute("cid", cid);
+		request.setAttribute("pageNum", pageNum);
+		request.setAttribute("categoryName", categoryName);
+		return "view_category_success";
+	}
+	
+	public String editSubCategory()
+	{
+		
+		String scid = request.getParameter("scid");
+		String pageNum = request.getParameter("pageNum");
+		String parentCategoryName = request.getParameter("parentCategoryName");
+		String categoryName = request.getParameter("categoryName");
+		logger.info("scid to view: " + scid);
+		logger.info("pageNum to view: " + pageNum);
+		logger.info("parent category name to view: " + parentCategoryName);
+		logger.info("category name to view: " + categoryName);
+		request.setAttribute("scid", scid);
+		request.setAttribute("pageNum", pageNum);
+		request.setAttribute("parentCategoryName", parentCategoryName);
+		request.setAttribute("categoryName", categoryName);
+		
+		CategoryL1DAO dao = new CategoryL1DAOImpl();
+		List<CategoryL1> categories = dao.listAllL1Category();
+		request.setAttribute("parentCategories", categories);
+		logger.info("parent categories: " + categories);
+		return "view_sub_category_success";
+	}
+	
 	public String deletePost()
 	{
 		String pidStr = request.getParameter("pid");
@@ -613,7 +691,7 @@ public class AdminAction extends SuperAction {
 		return "delete_post_success";
 	}
 	
-	public String getPageData()
+	public String getPostPreNextPageData()
 	{
 		
 		String pageNumStr = request.getParameter("pageNum");
@@ -626,12 +704,68 @@ public class AdminAction extends SuperAction {
 		
 		PostPageDataDAO ppdDAO = new PostPageDataDAOImpl();	
 		
+		
 		PostPageData postPageData = ppdDAO.getPostPageData(pageNum);
+		this.postPageData = postPageData;
 		logger.info("pageNum: " + pageNum);
 		logger.info("postPageData = " + postPageData);
 		logger.info("postPageDataSize = " + postPageData.getList().size());
 		request.setAttribute("postPageData", postPageData);
-		return "get_page_data_success";
+		return "get_post_page_data_success";
+		
+		
+	}
+	
+	public String getCategoryPreNextPageData()
+	{
+		
+		String pageNumStr = request.getParameter("pageNum");
+		int pageNum = 1;
+		if(pageNumStr != null)
+		{
+			pageNum = Integer.parseInt(pageNumStr);
+		}
+		
+		
+		CategoryPageDataDAO ppdDAO = new CategoryPageDataDAOImpl();	
+		
+		
+		CategoryPageData categoryPageData = ppdDAO.getCategoryPageData(pageNum);
+		this.categoryPageData = categoryPageData;
+		logger.info("pageNum: " + pageNum);
+		logger.info("categoryPageData = " + categoryPageData);
+		logger.info("categoryPageDataSize = " + categoryPageData.getList().size());
+		logger.info("categoryPageData = " + categoryPageData.getList());
+		request.setAttribute("categoryPageData", categoryPageData);
+		request.setAttribute("allL1Categories", categoryPageData.getList());
+		return "get_category_page_data_success";
+		
+		
+	}
+	
+	public String getSubCategoryPreNextPageData()
+	{
+		
+		String pageNumStr = request.getParameter("pageNum");
+		int pageNum = 1;
+		if(pageNumStr != null)
+		{
+			pageNum = Integer.parseInt(pageNumStr);
+		}
+		
+		
+		SubCategoryPageDataDAO ppdDAO = new SubCategoryPageDataDAOImpl();	
+		
+		
+		SubCategoryPageData subCategoryPageData = ppdDAO.getSubCategoryPageData(pageNum);
+		this.subCategoryPageData = subCategoryPageData;
+		logger.info("pageNum: " + pageNum);
+		logger.info("subCategoryPageData = " + subCategoryPageData);
+		logger.info("subCategoryPageDataSize = " + subCategoryPageData.getList().size());
+		logger.info("subCategoryPageData = " + subCategoryPageData.getList());
+		request.setAttribute("subCategoryPageData", subCategoryPageData);
+		request.setAttribute("allL2Categories", subCategoryPageData.getList());
+		return "get_sub_category_page_data_success";
 		
 		
 	}
@@ -688,6 +822,271 @@ public class AdminAction extends SuperAction {
 			request.setAttribute("updatePostResult", "Update Failed");
 			return "update_post_failed";
 		}
+	}
+	
+	public String toCategoryManage()
+	{
+		
+		
+		String pageNumStr = request.getParameter("pageNum");
+		int pageNum = 1;
+		if(pageNumStr != null)
+		{
+			pageNum = Integer.parseInt(pageNumStr);
+		}
+		
+		
+		CategoryPageDataDAO ppdDAO = new CategoryPageDataDAOImpl();	
+		
+		CategoryPageData categoryPageData = ppdDAO.getCategoryPageData(pageNum);
+		this.categoryPageData = categoryPageData;
+		logger.info("pageNum: " + pageNum);
+		logger.info("categoryPageData = " + categoryPageData);
+		logger.info("categoryPageDataSize = " + categoryPageData.getList().size());
+		request.setAttribute("allL1Categories", categoryPageData.getList());
+		logger.info("allL1Categories: " + categoryPageData.getList());
+		
+		request.setAttribute("categoryPageData", categoryPageData);
+		
+		
+		
+		//Used for deciding whether to output update result info in web page
+		String updateCategoryInfoSource = request.getParameter("updateCategoryInfoSource");
+		String updateCategoryResult = request.getParameter("updateCategoryResult");
+		
+		logger.info("updateCategoryInfoSource = " + updateCategoryInfoSource);
+		logger.info("updateCategoryResult = " + updateCategoryResult);
+		
+		request.setAttribute("updateCategoryInfoSource", updateCategoryInfoSource);
+		request.setAttribute("updateCatetoryResult", updateCategoryResult);
+		
+		
+		return "to_category_manage_success";
+	}
+	
+	private int pageNumForCategory;	
+	public int getPageNumForCategory() {
+		return pageNumForCategory;
+	}
+	public void setPageNumForCategory(int pageNumForCategory) {
+		this.pageNumForCategory = pageNumForCategory;
+	}
+	public String deleteCategory()
+	{
+		int cid = Integer.parseInt(request.getParameter("cid"));
+		
+				
+		
+		CategoryL1DAO dao = new CategoryL1DAOImpl();
+		dao.deleteCategory(cid);
+		
+		String pageNumStr = request.getParameter("pageNum");
+		logger.info("pageNumStr = " + pageNumStr);
+		if(pageNumStr == null)
+			pageNumStr = "1";
+		
+		this.setPageNumForCategory(Integer.parseInt(pageNumStr));
+		
+		return "delete_category_success";
+	}
+	
+	
+	public String deleteSubCategory()
+	{
+		int cid = Integer.parseInt(request.getParameter("scid"));
+		
+				
+		
+		CategoryL2DAO dao = new CategoryL2DAOImpl();
+		dao.deleteSubCategory(cid);
+		
+		String pageNumStr = request.getParameter("pageNum");
+		logger.info("pageNumStr = " + pageNumStr);
+		if(pageNumStr == null)
+			pageNumStr = "1";
+		
+		this.setPageNumForSubCategory(Integer.parseInt(pageNumStr));
+		
+		return "delete_sub_category_success";
+	}
+	
+	
+	private String updateCategoryInfoSource;
+	private String updateCategoryResult;
+	
+	public String getUpdateCategoryInfoSource() {
+		return updateCategoryInfoSource;
+	}
+	public void setUpdateCategoryInfoSource(String updateCatetoryInfoSource) {
+		this.updateCategoryInfoSource = updateCatetoryInfoSource;
+	}
+	public String getUpdateCategoryResult() {
+		return updateCategoryResult;
+	}
+	public void setUpdateCategoryResult(String updateCategoryResult) {
+		this.updateCategoryResult = updateCategoryResult;
+	}
+	public String updateCategory()
+	{
+		int cid = Integer.parseInt(request.getParameter("cid"));
+		String categoryName = request.getParameter("categoryName");
+		String pageNumStr = request.getParameter("pageNum");
+		logger.info("pageNumStr = " + pageNumStr);
+		if(pageNumStr == null)
+			pageNumStr = "1";
+		
+		logger.info("cid to update: " + cid);
+		logger.info("categoryName to update:" + categoryName);
+		logger.info("pageNumstr = " + pageNumStr);
+		CategoryL1 c = new CategoryL1();
+		c.setCid(cid);
+		c.setCategoryName(categoryName);
+		CategoryL1DAO dao = new CategoryL1DAOImpl();
+		
+		this.setPageNumForCategory(Integer.parseInt(pageNumStr));
+		
+		
+		boolean isCategoryExist = dao.isCategoryExist(c);
+		
+		
+		this.setUpdateCategoryInfoSource("from_update");
+		if(isCategoryExist)
+		{			
+			this.setUpdateCategoryResult("Update Failed: \"" + categoryName + "\" is already existed");
+			return "update_category_failed";
+		}
+		else
+		{
+			dao.updateCategory(c);		
+			this.setUpdateCategoryResult("Update To Category Name \"" + categoryName + "\" Success");
+			return "update_category_success";
+			
+		}
+		
+		
+		
+	}
+	
+	
+	
+	private int pageNumForSubCategory;	
+	private SubCategoryPageData subCategoryPageData = null;
+	
+	
+	public int getPageNumForSubCategory() {
+		return pageNumForSubCategory;
+	}
+	public void setPageNumForSubCategory(int pageNumForSubCategory) {
+		this.pageNumForSubCategory = pageNumForSubCategory;
+	}
+	
+	public SubCategoryPageData getSubCategoryPageData() {
+		return subCategoryPageData;
+	}
+	public void setSubCategoryPageData(SubCategoryPageData subCategoryPageData) {
+		this.subCategoryPageData = subCategoryPageData;
+	}
+	public String toSubCategoryManage()
+	{
+		
+		
+		String pageNumStr = request.getParameter("pageNum");
+		int pageNum = 1;
+		if(pageNumStr != null)
+		{
+			pageNum = Integer.parseInt(pageNumStr);
+		}
+		
+		
+		SubCategoryPageDataDAO ppdDAO = new SubCategoryPageDataDAOImpl();	
+		
+		SubCategoryPageData subCategoryPageData = ppdDAO.getSubCategoryPageData(pageNum);
+		this.subCategoryPageData = subCategoryPageData;
+		logger.info("pageNum: " + pageNum);
+		logger.info("subCategoryPageData = " + subCategoryPageData);
+		logger.info("subCategoryPageDataSize = " + subCategoryPageData.getList().size());
+		request.setAttribute("allL2Categories", subCategoryPageData.getList());
+		logger.info("allL2Categories: " + subCategoryPageData.getList());
+		
+		request.setAttribute("subCategoryPageData", subCategoryPageData);
+		
+		//Used for deciding whether to output update result info in web page
+		String updateSubCategoryInfoSource = request.getParameter("updateSubCategoryInfoSource");
+		String updateSubCategoryResult = request.getParameter("updateSubCategoryResult");
+		
+		logger.info("updateSubCategoryInfoSource = " + updateSubCategoryInfoSource);
+		logger.info("updateSubCategoryResult = " + updateSubCategoryResult);
+		
+		request.setAttribute("updateSubCategoryInfoSource", updateSubCategoryInfoSource);
+		request.setAttribute("updateSubCatetoryResult", updateSubCategoryResult);
+
+		return "to_sub_category_manage_success";
+	}
+	
+	private String updateSubCategoryInfoSource;
+	private String updateSubCategoryResult;
+	
+	public String getUpdateSubCategoryInfoSource() {
+		return updateSubCategoryInfoSource;
+	}
+	public void setUpdateSubCategoryInfoSource(String updateSubCategoryInfoSource) {
+		this.updateSubCategoryInfoSource = updateSubCategoryInfoSource;
+	}
+	public String getUpdateSubCategoryResult() {
+		return updateSubCategoryResult;
+	}
+	public void setUpdateSubCategoryResult(String updateSubCategoryResult) {
+		this.updateSubCategoryResult = updateSubCategoryResult;
+	}
+	public String updateSubCategory()
+	{
+		int scid = Integer.parseInt(request.getParameter("scid"));
+		String parentCategoryName = request.getParameter("parentCategoryName");
+		String categoryName = request.getParameter("categoryName");
+		String pageNumStr = request.getParameter("pageNum");
+		logger.info("pageNumStr = " + pageNumStr);
+		if(pageNumStr == null)
+			pageNumStr = "1";
+		
+		logger.info("scid to update: " + scid);
+		logger.info("parentCategoryName to update:" + parentCategoryName);
+		logger.info("categoryName to update:" + categoryName);
+		logger.info("pageNumstr = " + pageNumStr);
+		CategoryL2 c = new CategoryL2();
+		c.setScid(scid);
+		c.setParentCategoryName(parentCategoryName);
+		c.setCategoryName(categoryName);
+		CategoryL2DAO dao = new CategoryL2DAOImpl();
+		//dao.updateSubCategory(c);
+		this.setPageNumForSubCategory(Integer.parseInt(pageNumStr));
+		
+		boolean isCategoryExist = dao.isSubCategoryExist(c);
+		
+		
+		this.setUpdateSubCategoryInfoSource("from_update");
+		if(isCategoryExist)
+		{			
+			this.setUpdateSubCategoryResult("Update Failed: \"" + parentCategoryName + "," + categoryName + "\" is already existed");
+			return "update_sub_category_failed";
+		}
+		else
+		{
+			dao.updateSubCategory(c);		
+			this.setUpdateSubCategoryResult("Update To Category Name \"" + parentCategoryName + "," + categoryName + "\" Success");
+			return "update_sub_category_success";
+			
+		}
+		
+	}
+	
+	public String toGenDownloadURL()
+	{
+		return "to_gen_download_url_success";
+	}
+	
+	public String toAddCategory()
+	{
+		return "to_add_category_success";
 	}
 	
 }

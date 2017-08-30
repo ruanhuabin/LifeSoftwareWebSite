@@ -76,7 +76,7 @@ public class CategoryL2DAOImpl implements CategoryL2DAO{
 	}
 
 	@Override
-	public boolean isCategoryExist(CategoryL2 c2) {
+	public boolean isSubCategoryExist(CategoryL2 c2) {
 		// TODO Auto-generated method stub
 		Transaction tx = null;
 		try{
@@ -112,6 +112,159 @@ public class CategoryL2DAOImpl implements CategoryL2DAO{
 			
 			
 		}
+	}
+	
+	@Override
+	public List<CategoryL2> getSubCategoryDataByPageIndex(int offset, int pageSize) {
+		// TODO Auto-generated method stub
+		
+		
+		Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
+        Transaction tx = null;
+        List<CategoryL2> list = null;
+        String hql = "from CategoryL2";
+        
+        try
+        {
+            tx = session.beginTransaction();            
+            Query query = session.createQuery(hql).setFirstResult(offset).setMaxResults(pageSize);
+            
+            list = query.list();
+            
+            tx.commit();
+            
+        }
+        catch (Exception e)
+        {
+            if(tx != null)
+            {
+                tx.rollback();
+            }
+            
+            e.printStackTrace();
+        }
+        finally
+        {
+        	if(tx != null)
+            {
+                tx = null;
+            }
+        }
+        
+        
+        return list;
+	}
+			
+
+	@Override
+	public boolean deleteSubCategory(int scid) {
+		// TODO Auto-generated method stub
+		Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
+        Transaction tx = null;
+        
+        CategoryL2 c = new CategoryL2();
+        c.setScid(scid);
+        
+        try
+        {
+            tx = session.beginTransaction();            
+            session.delete(c);            
+            tx.commit();
+            
+        }
+        catch (Exception e)
+        {
+            if(tx != null)
+            {
+                tx.rollback();
+            }
+            
+            e.printStackTrace();
+            return false;
+        }
+        finally
+        {
+        	if(tx != null)
+            {
+                tx = null;
+            }
+        }
+		return true;
+	}
+	
+	
+	@Override
+	public boolean updateSubCategory(CategoryL2 sc) {
+		// TODO Auto-generated method stub
+		Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
+        Transaction tx = null;
+        
+        
+        try
+        {
+            tx = session.beginTransaction();            
+            session.update(sc);            
+            tx.commit();
+            
+        }
+        catch (Exception e)
+        {
+            if(tx != null)
+            {
+                tx.rollback();
+            }
+            
+            e.printStackTrace();
+            return false;
+        }
+        finally
+        {
+        	if(tx != null)
+            {
+                tx = null;
+            }
+        }
+		return true;
+	}
+	
+	@Override
+	public int getTotalRowNum() {
+		// TODO Auto-generated method stub
+		
+		Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
+        Transaction tx = null;
+        int allRows = 0;
+        String hql = "from CategoryL2";
+        try
+        {
+            tx = session.beginTransaction();
+            
+            Query query = session.createQuery(hql);
+            
+            allRows = query.list().size();
+            
+            tx.commit();
+            
+        }
+        catch (Exception e)
+        {
+            if(tx != null)
+            {
+                tx.rollback();
+            }
+            
+            e.printStackTrace();
+        }
+        finally
+        {
+            if(tx != null)
+            {
+            	tx = null;
+            }
+        }
+        
+        return allRows;
+		
 	}
 
 }

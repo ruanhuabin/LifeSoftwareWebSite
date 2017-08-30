@@ -3,6 +3,7 @@ package cn.edu.tsinghua.entity;
 import java.io.Serializable;
 
 public class CategoryL2 implements Serializable{
+	private int scid;
 	private String parentCategoryName;
 	private String categoryName;
 	
@@ -22,6 +23,13 @@ public class CategoryL2 implements Serializable{
 	public String toString() {
 		return "CategoryL2 [parentCategoryName=" + parentCategoryName
 				+ ", categoryName=" + categoryName + "]";
+	}
+	
+	public int getScid() {
+		return scid;
+	}
+	public void setScid(int scid) {
+		this.scid = scid;
 	}
 	@Override
 	public int hashCode() {

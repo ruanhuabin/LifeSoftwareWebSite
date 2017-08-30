@@ -1,9 +1,0 @@
-package cn.edu.tsinghua.service;
-
-import cn.edu.tsinghua.entity.Admin;
-import cn.edu.tsinghua.entity.Post;
-
-public interface AdminDAO {	
-	public boolean isAdminValid(Admin admin);	
-	
-}

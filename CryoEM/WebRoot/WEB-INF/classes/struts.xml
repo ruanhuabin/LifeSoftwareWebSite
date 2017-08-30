@@ -9,6 +9,7 @@
     
     <constant name="struts.multipart.maxSize" value="1073741824"/>
     <constant name="struts.i18n.encoding" value="utf-8"></constant>
+    <constant name="struts.devMode" value="true" />
     
     <package name="admin" namespace="/post" extends="default">
     	<action name="*_*" class="cn.edu.tsinghua.action.{1}Action" method="{2}">
@@ -86,10 +87,70 @@
         	/edit_post.jsp
         </result>
         
-        <result name="delete_post_success" type="redirectAction">Admin_toPostManage.action?pageNum=${pageNumForPost}</result>
+        <result name="delete_post_success" type="redirectAction">
+        	Admin_toPostManage.action?pageNum=${pageNumForPost}
+        </result>
         
-        <result name="get_page_data_success">
+        <result name="get_post_page_data_success">
         	/manage_post.jsp
+        </result>
+        
+        <result name="to_category_manage_success">
+        	/manage_category.jsp
+        </result>
+        
+         <result name="get_category_page_data_success">
+        	/manage_category.jsp
+        </result>
+        
+         <result name="view_category_success">
+        	/edit_category.jsp
+        </result>
+        
+        <result name="delete_category_success" type="redirectAction">
+        	Admin_toCategoryManage.action?pageNum=${pageNumForCategory}
+        </result>
+        
+        <result name="update_category_success" type="redirectAction">
+        	Admin_toCategoryManage.action?pageNum=${pageNumForCategory}&amp;updateCategoryInfoSource=${updateCategoryInfoSource}&amp;updateCategoryResult=${updateCategoryResult}
+        </result>
+        
+        <result name="update_category_failed" type="redirectAction">
+        	Admin_toCategoryManage.action?pageNum=${pageNumForCategory}&amp;updateCategoryInfoSource=${updateCategoryInfoSource}&amp;updateCategoryResult=${updateCategoryResult}
+        </result>
+        
+        
+        <result name="to_sub_category_manage_success">
+        	/manage_sub_category.jsp
+        </result>
+        
+        <result name="get_sub_category_page_data_success">
+        	/manage_sub_category.jsp
+        </result>
+        
+        <result name="delete_sub_category_success" type="redirectAction">
+        	Admin_toSubCategoryManage.action?pageNum=${pageNumForSubCategory}
+        </result>
+        
+        <result name="view_sub_category_success">
+        	/edit_sub_category.jsp
+        </result>
+        
+        <result name="update_sub_category_success" type="redirectAction">
+        	Admin_toSubCategoryManage.action?pageNum=${pageNumForSubCategory}&amp;updateSubCategoryInfoSource=${updateSubCategoryInfoSource}&amp;updateSubCategoryResult=${updateSubCategoryResult}
+        </result>
+        
+        <result name="update_sub_category_failed" type="redirectAction">
+        	Admin_toSubCategoryManage.action?pageNum=${pageNumForSubCategory}&amp;updateSubCategoryInfoSource=${updateSubCategoryInfoSource}&amp;updateSubCategoryResult=${updateSubCategoryResult}
+        </result>
+        
+        
+        <result name="to_gen_download_url_success">
+        	/gen_file_download_url.jsp
+        </result>
+        
+        <result name="to_add_category_success">
+        	/add_category.jsp
         </result>
         
         <result name="test_login_success">
@@ -108,7 +169,7 @@
 	    		
 
 	    <param name="uploadDir">
-	    	/WEB-INF/UploadFiles/
+	    	/UploadFiles/
 	    </param>
     	</action>
 
@@ -116,7 +177,7 @@
     	
     	
     	<action name="download" class="cn.edu.tsinghua.action.DownloadAction">	    		
-	    	<param name="downloadDir">/WEB-INF/UploadFiles/</param>    	
+	    	<param name="downloadDir">/UploadFiles/</param>    	
 	    	<result type="stream">
 	    		<param name="inputName">softwareTargetFile</param>	    		
 	    		<!--filename 用于指定下载时候，在下载对话框中显示的文件名  -->

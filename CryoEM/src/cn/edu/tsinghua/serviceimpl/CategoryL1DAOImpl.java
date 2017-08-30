@@ -107,8 +107,158 @@ public class CategoryL1DAOImpl implements CategoryL1DAO{
 			
 		}
 	}
+	
+	@Override
+	public int getTotalRowNum() {
+		// TODO Auto-generated method stub
+		
+		Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
+        Transaction tx = null;
+        int allRows = 0;
+        String hql = "from CategoryL1";
+        try
+        {
+            tx = session.beginTransaction();
+            
+            Query query = session.createQuery(hql);
+            
+            allRows = query.list().size();
+            
+            tx.commit();
+            
+        }
+        catch (Exception e)
+        {
+            if(tx != null)
+            {
+                tx.rollback();
+            }
+            
+            e.printStackTrace();
+        }
+        finally
+        {
+            if(tx != null)
+            {
+            	tx = null;
+            }
+        }
+        
+        return allRows;
+		
+	}
+	
+	@Override
+	public List<CategoryL1> getCategoryDataByPageIndex(int offset, int pageSize) {
+		// TODO Auto-generated method stub
+		
+		
+		Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
+        Transaction tx = null;
+        List<CategoryL1> list = null;
+        String hql = "from CategoryL1";
+        
+        try
+        {
+            tx = session.beginTransaction();            
+            Query query = session.createQuery(hql).setFirstResult(offset).setMaxResults(pageSize);
+            
+            list = query.list();
+            
+            tx.commit();
+            
+        }
+        catch (Exception e)
+        {
+            if(tx != null)
+            {
+                tx.rollback();
+            }
+            
+            e.printStackTrace();
+        }
+        finally
+        {
+        	if(tx != null)
+            {
+                tx = null;
+            }
+        }
+        
+        
+        return list;
+	}
 			
 
+	@Override
+	public boolean deleteCategory(int cid) {
+		// TODO Auto-generated method stub
+		Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
+        Transaction tx = null;
+        
+        CategoryL1 c = new CategoryL1();
+        c.setCid(cid);
+        
+        try
+        {
+            tx = session.beginTransaction();            
+            session.delete(c);            
+            tx.commit();
+            
+        }
+        catch (Exception e)
+        {
+            if(tx != null)
+            {
+                tx.rollback();
+            }
+            
+            e.printStackTrace();
+            return false;
+        }
+        finally
+        {
+        	if(tx != null)
+            {
+                tx = null;
+            }
+        }
+		return true;
+	}
 	
+	
+	@Override
+	public boolean updateCategory(CategoryL1 c) {
+		// TODO Auto-generated method stub
+		Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
+        Transaction tx = null;
+        
+        
+        try
+        {
+            tx = session.beginTransaction();            
+            session.update(c);            
+            tx.commit();
+            
+        }
+        catch (Exception e)
+        {
+            if(tx != null)
+            {
+                tx.rollback();
+            }
+            
+            e.printStackTrace();
+            return false;
+        }
+        finally
+        {
+        	if(tx != null)
+            {
+                tx = null;
+            }
+        }
+		return true;
+	}
 
 }

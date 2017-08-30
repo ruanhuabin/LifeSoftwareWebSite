@@ -72,52 +72,58 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div >
 <p><s:property value="#request.updatePostResult"/></p>
 </div>
-<div class="form-div">
-		<form action="post/Admin_updatePost.action"	enctype="multipart/form-data" method="post" style="" title="" id="" class="">
-			  <input type="hidden" name="pid" value="<s:property value="#request.postToEdit.pid"/>" />
-			  Title:
-			  <%-- <input type="text" name="title" required="true"  value="<s:property value='#request.postToEdit.title'/>"></input> --%>
-			  <s:textfield name="title" required="true"  value="%{#request.postToEdit.title}"></s:textfield>
-			  <!--  <input type="text" name="title"/>  -->
-			  <br/>
-			  <br/>
-			  Category: 
-			  <select id="categorySelect"  name="category" onclick="selCity()">
-			  <s:iterator value="#request.allL1Category" id="catagory">
-			  
-			  <s:if test='#catagory.categoryName.equals(#request.postToEdit.catagory)'> 
-			 
-	            <option selected="selected" value="<s:property value="#catagory.categoryName"/>"><s:property value="#catagory.categoryName"/></option>
-	        </s:if>        
-	        <s:else>
-	           <option value="<s:property value="#catagory.categoryName"/>"><s:property value="#catagory.categoryName"/></option>
-	        </s:else>
-				  
-			  
-				  			  
-			  </s:iterator>
-			  </select>
-			  
-			  <br/>
-			  <br/>
-			  SubCategory: 
-			  <select id="subCategoryID" name="subCategory">
-	        	<option selected="selected">----Please Select Sub Category----</option>
-	       		
-	    	  </select>	
-	    	  <br/>
-	    	  <br/>
-			  
-			  <s:file name="yourFile"></s:file>
-			  <br />
-			  <br />
-			  Description:
-			  <br />    
-			  
-			  <s:textarea rows="20" cols="80" required="true" name="description" value="%{#request.postToEdit.description}"> </s:textarea>
-			  <br/>			  
-			  <input type="submit" value="submit"/>
-		</form>
+
+<div style="width: 100%;">
+			<div style="float:left; width: 18%">
+				<s:include value="admin_left_menu.jsp"></s:include>
+			</div>
+
+			<div style="float:right; width:82%">
+						<p><s:include value="button_tool.jsp"></s:include></p>
+						<form action="post/Admin_updatePost.action"	enctype="multipart/form-data" method="post" style="" title="" id="" class="">
+							  <input type="hidden" name="pid" value="<s:property value="#request.postToEdit.pid"/>" />
+							  Title:
+							  <%-- <input type="text" name="title" required="true"  value="<s:property value='#request.postToEdit.title'/>"></input> --%>
+							  <s:textfield name="title" required="true"  value="%{#request.postToEdit.title}"></s:textfield>
+							  <!--  <input type="text" name="title"/>  -->
+							  <br/>
+							  <br/>
+							  Category: 
+							  <select id="categorySelect"  name="category" onclick="selCity()">
+
+							<s:iterator value="#request.allL1Category" id="catagory">
+							  <s:if test='#catagory.categoryName.equals(#request.postToEdit.catagory)'> 
+							 
+					            <option selected="selected" value="<s:property value="#catagory.categoryName"/>"><s:property value="#catagory.categoryName"/></option>
+					        </s:if>        
+					        <s:else>
+					           <option value="<s:property value="#catagory.categoryName"/>"><s:property value="#catagory.categoryName"/></option>
+					        </s:else> 
+							</s:iterator>
+							  </select>
+							  
+							  <br/>
+							  <br/>
+							  SubCategory: 
+							  <select id="subCategoryID" name="subCategory">
+					        	<option selected="selected">----Please Select Sub Category----</option>
+					       		
+					    	  </select>	
+					    	  <br/>
+					    	  <br/>
+							  
+							  <s:file name="yourFile"></s:file>
+							  <br />
+							  <br />
+							  Description:
+							  <br />    
+
+							  <s:textarea rows="20" cols="80" required="true" name="description" value="%{#request.postToEdit.description}"> </s:textarea>
+							  <br/>			  
+							  <input type="submit" value="submit"/>
+						</form>
+					
+				</div>
 </div>
 		
 <div style="clear:both"></div>

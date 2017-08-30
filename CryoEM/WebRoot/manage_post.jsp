@@ -23,7 +23,7 @@ function viewPost()
 
 </head>
 <body> 
-
+<s:debug></s:debug>
 
 <div id="main-container">	
 <div id="header"></div>
@@ -39,13 +39,13 @@ function viewPost()
 
 <div style="width: 100%;">
 	<div style="float:left; width: 18%">
-		<p><a href="<%=path%>/post/Admin_toAdmin.action">Create New Post</a></p>
-		<p><a href="<%=path%>/post/Admin_toPostManage.action?pageNum=3">Manage Posts</a></p>
-		<p><a href="<%=path%>/Admin_toCategoryManage.action">Manage Categories</a></p>
-		<p><a href="<%=path%>/Admin_toSubCategoryManage.action">Manage Sub Categories</a></p>		
+		<s:include value="admin_left_menu.jsp"></s:include>		
 	</div>
 	
 	<div style="float:right; width:82%">
+	
+	<p><s:include value="button_tool.jsp"></s:include></p>
+	
 	<table border="1">
 	<thead>
 	<tr>
@@ -74,7 +74,7 @@ function viewPost()
 
 <div style="clear:both"></div>
 
-<s:include value="npj.jsp">	
+<%-- <s:include value="npj.jsp">	
 	<s:param name="currPageData">
 	totalPage=<s:property value="#request.postPageData.totalPage"/>, 
 	allRows=<s:property value="#request.postPageData.allRows"/>,
@@ -82,10 +82,18 @@ function viewPost()
 	action=Admin_getPageData.action
 	</s:param>
 </s:include>
+ --%>
 
-<div style="clear:both"></div>
+<!--要想这个set生效，必须在产生这个页面action中有postPageData这个属性，并且有这个属性的get方法  -->
+<s:set var="currPageData" value="postPageData" scope="request"/>
+<s:include value="npj_new.jsp">
+	<s:param name="actionURL">Admin_getPostPreNextPageData.action</s:param>
+</s:include>
 
-<div id="footer">&copy; 2017 <a href="mailto:ruanhuabin@tsinghua.edu.cn">Huabin Ruan</a> | Design By <a href="#">Huabin Ruan</a> </div>
+
+
+<s:include value="footer.jsp"></s:include>
+
 </div>
 
 
