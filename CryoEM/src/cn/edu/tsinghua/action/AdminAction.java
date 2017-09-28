@@ -237,15 +237,24 @@ public class AdminAction extends SuperAction {
 		String category = request.getParameter("category");
 		String subCategory = request.getParameter("subCategory");
 		
+		
+		
 		if(subCategory.equals("----Please Select Sub Category----"))
 		{
 			subCategory = null;
 		}
 		
+		String isMarkedWelcome = request.getParameter("isMarkedWelcome");
+		String author = request.getParameter("author");
+		String authorHomePageURL = request.getParameter("authorHomePage");
+		
 		logger.info("post title: " + title);
 		logger.info("post description: " + description);
 		logger.info("post category:" + category);
 		logger.info("post sub category:" + subCategory);
+		logger.info("isMarkedWelcome :" + isMarkedWelcome);
+		logger.info("author:" + author);
+		logger.info("author home page url:" + authorHomePageURL);
 		
 		writeUploadFile(newFileName);
 		
@@ -256,6 +265,9 @@ public class AdminAction extends SuperAction {
 		p.setCatagory(category);
 		p.setSubCatagory(subCategory);
 		p.setSoftwareFileName(this.yourFileFileName);
+		p.setIsWelcomePost(isMarkedWelcome);
+		p.setAuthor(author);
+		p.setAuthorHomePageURL(authorHomePageURL);
 		PostDAO pDAO = new PostDAOImpl();
 		pDAO.addPost(p);
 		
@@ -786,12 +798,19 @@ public class AdminAction extends SuperAction {
 			subCategory = null;
 		}
 		
+		String isMarkedWelcome = request.getParameter("isMarkedWelcome");
+		String author = request.getParameter("author");
+		String authorHomePageURL = request.getParameter("authorHomePage");
+		
 		PostDAO pDAO = new PostDAOImpl();
 		Post p = pDAO.getPost(pid);
 		p.setTitle(title);
 		p.setDescription(description);
 		p.setCatagory(category);
 		p.setSubCatagory(subCategory);
+		p.setAuthor(author);
+		p.setAuthorHomePageURL(authorHomePageURL);
+		p.setIsWelcomePost(isMarkedWelcome);
 		
 		
 		if(this.yourFile != null)

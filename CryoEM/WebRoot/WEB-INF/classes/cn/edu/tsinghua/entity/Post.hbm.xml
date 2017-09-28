@@ -22,6 +22,10 @@
 		<property name="softwareFileName" type="java.lang.String" length="1024"/>
 		<property name="catagory" type="java.lang.String" length="512"/>
 		<property name="subCatagory" type="java.lang.String" length="512"/>
-			
+		
+		<property name="isWelcomePost" type="java.lang.String" length="16"/>
+		<property name="author" type="java.lang.String" length="128"/>
+		<property name="authorHomePageURL" type="java.lang.String" length="1024"/>
+		<property name="authorHeadIconURI" type="java.lang.String" length="1024"/>			
 	</class>
 </hibernate-mapping>

@@ -193,6 +193,14 @@
         <result name="list_software_success">
         	/list_software.jsp
         </result>
+        
+        <result name="list_welcome_post_success">
+        	/list_current_select_software.jsp
+        </result>
+        
+        <result name="list_current_select_post_success">
+        	/list_current_select_software.jsp
+        </result>
         </action>
         
     </package>

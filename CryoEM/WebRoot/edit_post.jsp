@@ -55,7 +55,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 <div id="main-container">	
-<div id="header"></div>
+<%-- <div id="header"></div>
 <div id="navigation">
 	<ul>		
 		<li><a href="<%=path%>/index.jsp">Home</font></a></li> 
@@ -65,12 +65,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</ul>
 </div>
 <br/>
-<br/>
-
+<br/> --%>
+<s:include value="header_navigation.jsp"></s:include>
 <div style="clear:both"></div>
 
-<div >
-<p><s:property value="#request.updatePostResult"/></p>
+<div align="center" >
+<p><font color="red"><s:property value="#request.updatePostResult"/></font></p>
 </div>
 
 <div style="width: 100%;">
@@ -109,6 +109,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					        	<option selected="selected">----Please Select Sub Category----</option>
 					       		
 					    	  </select>	
+					    	  <br/>
+					    	  <br/>
+					    	  Author: <s:textfield name="author" required="true"  value="%{#request.postToEdit.author}"></s:textfield>
+					    	  <br/>
+					    	  <br/>
+					    	  Author Home Page: <s:textfield name="authorHomePage" value="%{#request.postToEdit.authorHomePageURL}"></s:textfield>
+					    	  <br/>
+					    	  <br/>
+					    	  <s:if test='#request.postToEdit.isWelcomePost.equals("1")'>
+					    	  	<input type="checkbox" id="markWelcome" name="isMarkedWelcome" value="1" checked/>
+    							<label for="markWelcome">Marked as welcome software</label>
+					    	  </s:if>        
+					          <s:else>
+					          	<input type="checkbox" id="markWelcome" name="isMarkedWelcome" value="1"/>
+    							<label for="markWelcome">Marked as welcome software</label>
+					          </s:else> 
 					    	  <br/>
 					    	  <br/>
 							  

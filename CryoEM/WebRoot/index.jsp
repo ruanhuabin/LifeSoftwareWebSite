@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -22,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <div id="main-container">
 	
-<div id="header">
+<%-- <div id="header">
 </div>
 <div id="navigation">
 	<ul>
@@ -31,7 +32,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<li><a href="<%=path%>/post/Admin_toAdmin.action">Admin</a></li>  
 		<li><a href="http://10.10.32.133/qa">Forum</a></li>		
 	</ul>
-</div>
+</div> --%>
+<p><s:include value="header_navigation.jsp"></s:include></p>
 <script type="text/javascript">
 		var index_plist = {
 			obj : document.getElementById("navigation")

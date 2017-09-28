@@ -26,7 +26,7 @@ function viewPost()
 <s:debug></s:debug>
 
 <div id="main-container">	
-<div id="header"></div>
+<%-- <div id="header"></div>
 <div id="navigation">
 	<ul>		
 		<li><a href="<%=path%>/index.jsp">Home</font></a></li> 
@@ -34,7 +34,8 @@ function viewPost()
 		<li><a href="<%=path%>/post/Admin_toAdmin.action">Admin</a></li>  
 		<li><a href="http://10.10.32.133/thunder/answers/">Forum</a></li>	
 	</ul>
-</div>
+</div> --%>
+<s:include value="header_navigation.jsp"></s:include>
 <div style="clear:both"></div>
 
 <div style="width: 100%;">
@@ -52,6 +53,7 @@ function viewPost()
 	<td>Title</td>
 	<td>Description</td>
 	<td>Attachment</td>
+	<td>Author</td>	
 	<td>Edit</td>
 	<td>Delete</td>
 	</tr>
@@ -63,6 +65,7 @@ function viewPost()
 				
 				
 				<td><s:property value="#pageData.softwareFileName"/></td>
+				<td><s:property value="#pageData.author"/></td>
 				<td><a href="<%=basePath%>post/Admin_editPost.action?pid=<s:property value="#pageData.pid"/>" target="_blank" >Edit</a></td>
 				<td><a href='<%=basePath%>post/Admin_deletePost.action?pid=<s:property value="#pageData.pid"/>&pageNum=<s:property value="#request.postPageData.currentPage"/>'>Delete</a></td>
 			</tr>

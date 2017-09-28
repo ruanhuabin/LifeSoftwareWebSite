@@ -9,6 +9,10 @@ public class Post {
 	private String catagory;
 	private String subCatagory;
 	
+	private String isWelcomePost; // Used for determined whether this software is shown in welcome page
+	private String author;
+	private String authorHomePageURL;
+	private String authorHeadIconURI; 
 	
 	private String softwareFileName;//This attribute is only used for display in web page
 
@@ -60,12 +64,41 @@ public class Post {
 	public void setSoftwareFileName(String softwareFileName) {
 		this.softwareFileName = softwareFileName;
 	}
+	
+	
+	public String getIsWelcomePost() {
+		return isWelcomePost;
+	}
+	public void setIsWelcomePost(String isWelcomePost) {
+		this.isWelcomePost = isWelcomePost;
+	}
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	public String getAuthorHomePageURL() {
+		return authorHomePageURL;
+	}
+	public void setAuthorHomePageURL(String authorHomePageURL) {
+		this.authorHomePageURL = authorHomePageURL;
+	}
+	public String getAuthorHeadIconURI() {
+		return authorHeadIconURI;
+	}
+	public void setAuthorHeadIconURI(String authorHeadIconURI) {
+		this.authorHeadIconURI = authorHeadIconURI;
+	}
 	@Override
 	public String toString() {
 		return "Post [pid=" + pid + ", title=" + title + ", description="
 				+ description + ", softwareURI=" + softwareURI + ", catagory="
 				+ catagory + ", subCatagory=" + subCatagory
-				 + "]";
+				+ ", isWelcomePost=" + isWelcomePost + ", author=" + author
+				+ ", authorHomePageURL=" + authorHomePageURL
+				+ ", authorHeadIconURI=" + authorHeadIconURI
+				+ ", softwareFileName=" + softwareFileName + "]";
 	}
 	public Post(int pid, String title, String description, String softwareURI) {
 		super();
@@ -75,6 +108,25 @@ public class Post {
 		this.softwareURI = softwareURI;
 	}
 	
+	
+	
+	public Post(int pid, String title, String description, String softwareURI,
+			String catagory, String subCatagory, String isWelcomePost,
+			String author, String authorHomePageURL, String authorHeadIconURI,
+			String softwareFileName) {
+		super();
+		this.pid = pid;
+		this.title = title;
+		this.description = description;
+		this.softwareURI = softwareURI;
+		this.catagory = catagory;
+		this.subCatagory = subCatagory;
+		this.isWelcomePost = isWelcomePost;
+		this.author = author;
+		this.authorHomePageURL = authorHomePageURL;
+		this.authorHeadIconURI = authorHeadIconURI;
+		this.softwareFileName = softwareFileName;
+	}
 	public Post(int pid, String title, String description, String softwareURI,
 			String catagory, String subCatagory, String subSubCatagory) {
 		super();

@@ -28,11 +28,8 @@ String hostPort = request.getScheme()+"://"+request.getServerName()+":"+request.
  
 <div id="main-container">
 	
-<div id="header">
+<%-- <div id="header">
 </div>
-
-
-
 
 <div id="navigation">
 	<ul>
@@ -42,7 +39,9 @@ String hostPort = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<li><a href="http://10.10.32.133/qa">Forum</a></li>		
 	</ul>
 </div>
-
+ --%>
+ 
+<s:include value="header_navigation.jsp"></s:include>
 <div style="clear:both"></div>
 <script type="text/javascript">
 		var index_plist = {

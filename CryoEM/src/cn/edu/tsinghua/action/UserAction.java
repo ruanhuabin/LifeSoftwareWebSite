@@ -40,24 +40,82 @@ public class UserAction extends SuperAction {
 	{
 		PostDAO pDAO = new PostDAOImpl();
 		List<Post> allPost = pDAO.listAllPost();
+		request.setAttribute("all_post", allPost);		
+		logger.info("all post info: " + allPost);		
+		List<CategoryL2> catagories2 = getCatetoryResult(allPost);		
+		logger.info("catagories2 = " + catagories2);		
+		request.setAttribute("catagories", catagories2);
+		return "list_software_success";
+	}
+	
+	public String listWelcomeSoftware()
+	{
+		PostDAO pDAO = new PostDAOImpl();
+		List<Post> allPost = pDAO.listAllPost();
+		/*Select post that is marked as welcome post*/
+		Post welcomePost = getWelcomePost(allPost);
+		request.setAttribute("current_select_post", welcomePost);
+		List<CategoryL2> catagories2 = getCatetoryResult(allPost);		
+		logger.info("catagories2 = " + catagories2);		
+		request.setAttribute("catagories", catagories2);
+		request.setAttribute("catagories", catagories2);
+		return "list_welcome_software_success";
+	}
+	
+	private Post getPost(List<Post> allPost, int pid)
+	{
+		Post currentSelectPost = null;
+		for(Post p: allPost)
+		{
+			if(p.getPid() == pid)
+			{
+				currentSelectPost = p;
+			}
+		}
 		
-		request.setAttribute("all_post", allPost);
+		return currentSelectPost;
+	}
+	
+	public String listCurrentSelectPost()
+	{
+		String pid = request.getParameter("pid");
 		
-		logger.info("all post info: " + allPost);
+		PostDAO pDAO = new PostDAOImpl();
+		List<Post> allPost = pDAO.listAllPost();
 		
-		
-		List<CategoryL2> catagories2 = getCatetoryResult(allPost);
-		
-		logger.info("catagories2 = " + catagories2);
-		
+		List<CategoryL2> catagories2 = getCatetoryResult(allPost);		
+		logger.info("catagories2 = " + catagories2);		
 		request.setAttribute("catagories", catagories2);
 		
 		
+		if(pid == null)
+		{
+			/*Select post that is marked as welcome post*/
+			Post welcomePost = getWelcomePost(allPost);
+			request.setAttribute("current_select_post", welcomePost);
+			return "list_welcome_post_success";
+		}
 		
+		int pidInt = Integer.parseInt(pid);
+		Post p = getPost(allPost, pidInt);
+		request.setAttribute("current_select_post", p);
 		
+		return "list_current_select_post_success";
+	}
+	private Post getWelcomePost(List<Post> allPosts)
+	{
+		Post welcomePost = allPosts.get(0);
 		
+		for(Post p: allPosts)
+		{
+			if(p.getIsWelcomePost() != null && p.getIsWelcomePost().equals("1"))
+			{
+				welcomePost = p;
+				break;
+			}
+		}
 		
-		return "list_software_success";
+		return welcomePost;
 	}
 	
 	private class SubCatagoryWrapper
