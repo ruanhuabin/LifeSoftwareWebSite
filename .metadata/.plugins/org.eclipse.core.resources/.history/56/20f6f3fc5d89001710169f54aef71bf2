@@ -1,8 +1,0 @@
-package cn.edu.tsinghua.service;
-
-import cn.edu.tsinghua.entity.PostPageData;
-public interface CategoryPageDataDAO
-{
-	//pageNum is starting from 1
-	public CategoryPageData getPostPageData(int pageNum);
-}

@@ -70,9 +70,10 @@ public class DownloadAction extends SuperAction {
 		fileName = new String(fileName.getBytes("ISO-8859-1"), "UTF-8");
 		this.setOutputFilename(fileName);
 		logger.info("fileName = " + fileName);		
-		String uploadDir = ServletActionContext.getServletContext().getRealPath(this.downloadDir);	
-		
-		String filePath = uploadDir + "/" + fileName;		
+//		String uploadDir = ServletActionContext.getServletContext().getRealPath(this.downloadDir);	
+//		
+//		String filePath = uploadDir + "/" + fileName;
+		String filePath = this.downloadDir + "/" + fileName;
 		logger.info("filePath = " + filePath);
 		File file = new File(filePath);
 		return new FileInputStream(file);

@@ -1,9 +1,0 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
-
-<button title="click to generate an URL for file downloading"onclick="genURL()">Generate File URL</button>
-<button  title="click to create a new catagory" onclick="genCategory()">Create New Category</button>
-<button  title="click to create a new sub catagory" onclick="genSubCategory()">Create New Sub Category</button>

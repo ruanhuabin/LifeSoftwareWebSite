@@ -1,8 +1,0 @@
-package cn.edu.tsinghua.service;
-
-import cn.edu.tsinghua.entity.CategoryPageData;
-public interface SubCategoryPageDataDAO
-{
-	//pageNum is starting from 1
-	public SubCategoryPageData getSubCategoryPageData(int pageNum);
-}

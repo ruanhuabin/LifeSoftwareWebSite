@@ -169,7 +169,7 @@
 	    		
 
 	    <param name="uploadDir">
-	    	/UploadFiles/
+	    	D:/UploadFiles/
 	    </param>
     	</action>
 
@@ -177,7 +177,7 @@
     	
     	
     	<action name="download" class="cn.edu.tsinghua.action.DownloadAction">	    		
-	    	<param name="downloadDir">/UploadFiles/</param>    	
+	    	<param name="downloadDir">D:/UploadFiles/</param>    	
 	    	<result type="stream">
 	    		<param name="inputName">softwareTargetFile</param>	    		
 	    		<!--filename 用于指定下载时候，在下载对话框中显示的文件名  -->

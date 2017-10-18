@@ -151,9 +151,10 @@ public class AdminAction extends SuperAction {
 		logger.info("filename = " + this.yourFileFileName);
 		logger.info("filetype = " + this.yourFileContentType);
 
-		String path = ServletActionContext.getServletContext().getRealPath(
-				uploadDir);
+//		String path = ServletActionContext.getServletContext().getRealPath(
+//				uploadDir);
 
+		String path = uploadDir;
 		logger.info("path = " + path);				
 		File dir = new File(uploadDir);
 		if(!dir.exists())
@@ -278,7 +279,8 @@ public class AdminAction extends SuperAction {
 		BufferedOutputStream bos = null;
 
 		try {
-			String path = ServletActionContext.getServletContext().getRealPath(uploadDir);
+			//String path = ServletActionContext.getServletContext().getRealPath(uploadDir);
+			String path = uploadDir;
 			logger.info("file will be saved to path: " + path);			
 			File dir = new File(path);
 			if (!dir.exists())
@@ -448,9 +450,10 @@ public class AdminAction extends SuperAction {
 		logger.info("filename = " + this.userFileFileName);
 		logger.info("filetype = " + this.userFileContentType);
 
-		String path = ServletActionContext.getServletContext().getRealPath(
-				uploadDir);
+//		String path = ServletActionContext.getServletContext().getRealPath(
+//				uploadDir);
 
+		String path = uploadDir;
 		logger.info("path = " + path);
 
 		File dir = new File(path);

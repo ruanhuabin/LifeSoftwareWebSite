@@ -82,6 +82,7 @@
 <part id="34"/>
 <part id="35"/>
 <part id="36"/>
+<part id="37"/>
 </presentation>
 </folder>
 </info>
@@ -206,11 +207,15 @@
 <editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="manage_post.jsp" partName="manage_post.jsp" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/manage_post.jsp" title="manage_post.jsp" tooltip="CryoEM/WebRoot/manage_post.jsp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/manage_post.jsp"/>
 </editor>
-<editor activePart="true" focus="true" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="edit_category.jsp" partName="edit_category.jsp" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/edit_category.jsp" title="edit_category.jsp" tooltip="CryoEM/WebRoot/edit_category.jsp" workbook="DefaultEditorWorkbook">
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="edit_category.jsp" partName="edit_category.jsp" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/edit_category.jsp" title="edit_category.jsp" tooltip="CryoEM/WebRoot/edit_category.jsp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/edit_category.jsp"/>
 </editor>
 <editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="add_category.jsp" partName="add_category.jsp" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/add_category.jsp" title="add_category.jsp" tooltip="CryoEM/WebRoot/add_category.jsp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/add_category.jsp"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DownloadAction.java" partName="DownloadAction.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/action/DownloadAction.java" title="DownloadAction.java" tooltip="CryoEM/src/cn/edu/tsinghua/action/DownloadAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/action/DownloadAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1779" selectionTopPixel="930"/>
 </editor>
 </editors>
 <views>
@@ -232,7 +237,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (100 of 130 items)"/>
+<category IMemento.internal.id="Warnings (100 of 149 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -280,7 +285,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="com.genuitec.eclipse.webdesigner3.editors.jsp" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
+<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.genuitec.myeclipse.perspective.MyEclipsePerspectiveFactory" id="com.genuitec.myeclipse.perspective.myeclipseperspective" label="MyEclipse Java Enterprise"/>
 <alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
@@ -401,7 +406,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.041584935" ratioLeft="106" ratioRight="2443" relationship="2" relative="cvslocation"/>
+<info part="org.eclipse.ui.editorss" ratio="0.16908592" ratioLeft="431" ratioRight="2118" relationship="2" relative="cvslocation"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@365a384a" ratio="0.8917311" ratioLeft="1499" ratioRight="182" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
@@ -420,7 +425,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="bottom" ratio="0.7953488" ratioLeft="1026" ratioRight="264" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.45891473" ratioLeft="592" ratioRight="698" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -478,9 +483,9 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/CryoEM/WebRoot/edit_category.jsp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/CryoEM/WebRoot/add_category.jsp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" path="/CryoEM/src/struts.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" path="/CryoEM/src/struts.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CryoEM/src/cn/edu/tsinghua/action/DownloadAction.java"/>
 </editors>
-<item historyLabel="admin_login.jsp" index="0"/>
-<item historyLabel="admin.jsp" index="1"/>
 <item historyLabel="admin_login.jsp" index="0"/>
 <item historyLabel="admin.jsp" index="1"/>
 <item historyLabel="header.jsp" index="2"/>
@@ -568,7 +573,11 @@
 <item historyLabel="edit_category.jsp" index="9"/>
 <item historyLabel="struts.xml" index="11"/>
 <item historyLabel="manage_category.jsp" index="4"/>
-<item active="true" historyLabel="edit_category.jsp" index="9"/>
+<item historyLabel="edit_category.jsp" index="9"/>
+<item historyLabel="struts.xml" index="12"/>
+<item active="true" historyLabel="DownloadAction.java" index="13">
+<position info="not_deleted" x="635" y="14"/>
+</item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -586,6 +595,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DownloadAction.java" tooltip="CryoEM/src/cn/edu/tsinghua/action/DownloadAction.java">
+<persistable path="/CryoEM/src/cn/edu/tsinghua/action/DownloadAction.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="add_category.jsp" tooltip="CryoEM/WebRoot/add_category.jsp">
 <persistable path="/CryoEM/WebRoot/add_category.jsp"/>
 </file>
@@ -627,9 +639,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="page_template.jsp" tooltip="CryoEM/WebRoot/page_template.jsp">
 <persistable path="/CryoEM/WebRoot/page_template.jsp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="software_post.jsp" tooltip="CryoEM/WebRoot/software_post.jsp">
-<persistable path="/CryoEM/WebRoot/software_post.jsp"/>
 </file>
 </mruList>
 </workbench>
