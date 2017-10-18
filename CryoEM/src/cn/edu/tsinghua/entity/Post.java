@@ -13,6 +13,7 @@ public class Post {
 	private String author;
 	private String authorHomePageURL;
 	private String authorHeadIconURI; 
+	private String forumURL;
 	
 	private String softwareFileName;//This attribute is only used for display in web page
 
@@ -90,6 +91,14 @@ public class Post {
 	public void setAuthorHeadIconURI(String authorHeadIconURI) {
 		this.authorHeadIconURI = authorHeadIconURI;
 	}
+	
+	public String getForumURL() {
+		return forumURL;
+	}
+	public void setForumURL(String forumURL) {
+		this.forumURL = forumURL;
+	}
+	
 	@Override
 	public String toString() {
 		return "Post [pid=" + pid + ", title=" + title + ", description="
@@ -97,8 +106,8 @@ public class Post {
 				+ catagory + ", subCatagory=" + subCatagory
 				+ ", isWelcomePost=" + isWelcomePost + ", author=" + author
 				+ ", authorHomePageURL=" + authorHomePageURL
-				+ ", authorHeadIconURI=" + authorHeadIconURI
-				+ ", softwareFileName=" + softwareFileName + "]";
+				+ ", authorHeadIconURI=" + authorHeadIconURI + ", forumURL="
+				+ forumURL + ", softwareFileName=" + softwareFileName + "]";
 	}
 	public Post(int pid, String title, String description, String softwareURI) {
 		super();
@@ -141,6 +150,26 @@ public class Post {
 	public Post() {
 		// TODO Auto-generated constructor stub
 	}
+	public Post(int pid, String title, String description, String softwareURI,
+			String catagory, String subCatagory, String isWelcomePost,
+			String author, String authorHomePageURL, String authorHeadIconURI,
+			String forumURL, String softwareFileName) {
+		super();
+		this.pid = pid;
+		this.title = title;
+		this.description = description;
+		this.softwareURI = softwareURI;
+		this.catagory = catagory;
+		this.subCatagory = subCatagory;
+		this.isWelcomePost = isWelcomePost;
+		this.author = author;
+		this.authorHomePageURL = authorHomePageURL;
+		this.authorHeadIconURI = authorHeadIconURI;
+		this.forumURL = forumURL;
+		this.softwareFileName = softwareFileName;
+	}
+	
+	
 	
 	
 	

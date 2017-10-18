@@ -57,4 +57,16 @@ public class TestPost {
 		logger.info("all post :" + allPost);
 		
 	}
+	
+	@Test
+	public void testGetPostByHQL()
+	{		
+		
+		PostDAO pDAO = new PostDAOImpl();
+		List<Post> allPost = pDAO.getPostByHQL("from Post as p where p.isWelcomePost = '1'");
+		
+		logger.info("all post :" + allPost);
+		logger.info("size :" + allPost.size());
+		
+	}
 }

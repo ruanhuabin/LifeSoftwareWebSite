@@ -152,8 +152,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   				 </div>
   				 <br/>
   				 <div>
-  				 <label>Author Home Page: </label><s:textfield name="authorHomePage" required="false"></s:textfield>
+  				 <label>Author Home Page: </label><s:textfield name="authorHomePage"></s:textfield>
   				 </div>
+  				 
+  				 <br/>
+  				 <div>
+  				 <label>Discussing Forum: </label><s:textfield name="forumPage" ></s:textfield>
+  				 </div>
+  				 
   				 <br/>
   				 <br/>
   				 

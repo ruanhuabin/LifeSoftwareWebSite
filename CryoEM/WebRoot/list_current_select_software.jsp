@@ -124,7 +124,12 @@ String hostPort = request.getScheme()+"://"+request.getServerName()+":"+request.
    <div style="float:right; width:74%">
 			<h2><a id=<s:property value="#request.current_select_post.pid"/>></a><s:property value="#request.current_select_post.title"/> </h2>
 			<p>Author: <s:property value="#request.current_select_post.author"/> </p>
+			<s:if test='#request.current_select_post.authorHomePageURL.equals("") == false'>
 			<p>Author Home: <a href="http://<s:property value="%{#request.current_select_post.authorHomePageURL}"/>" target="_blank"> <s:property value="#request.current_select_post.authorHomePageURL"/> </a></p>
+			</s:if>
+			<s:if test='#request.current_select_post.forumURL.equals("") == false'>
+			<p>Discussing Forum: <a href="http://<s:property value="%{#request.current_select_post.forumURL}"/>" target="_blank"> <s:property value="#request.current_select_post.forumURL"/> </a></p>
+			</s:if>
 			
 			<p>
 				<s:text name="%{#request.current_select_post.description}"/>

@@ -256,4 +256,40 @@ public class PostDAOImpl implements PostDAO {
 		return true;
 	}
 
+	@Override
+	public List<Post> getPostByHQL(String hql) {
+		Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
+        Transaction tx = null;
+        List<Post> list = null;
+        
+        try
+        {
+            tx = session.beginTransaction();
+            
+            Query query = session.createQuery(hql);
+            list = query.list();
+            tx.commit();
+            
+        }
+        catch (Exception e)
+        {
+            if(tx != null)
+            {
+                tx.rollback();
+            }
+            
+            e.printStackTrace();
+        }
+        finally
+        {
+        	if(tx != null)
+            {
+                tx = null;
+            }
+        }
+        
+        
+        return list;
+	}
+
 }

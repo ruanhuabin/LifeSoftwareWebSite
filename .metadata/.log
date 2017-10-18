@@ -9822,3 +9822,6 @@ org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
 	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:320)
 	at org.eclipse.wst.jsdt.internal.core.JavaModelManager$15.run(JavaModelManager.java:4182)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2017-10-18 14:19:59.080
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove

@@ -220,7 +220,19 @@ public class AdminAction extends SuperAction {
 		return "software_upload_success";
 	}
 	
-	
+	private void unMarkPreviousWelcomePost()
+	{
+		PostDAO pDAO = new PostDAOImpl();
+		String hql = "from Post as p where p.isWelcomePost = '1'"; 
+		List<Post> posts = pDAO.getPostByHQL(hql);
+		if(posts.size() != 0)
+		{
+			Post p = posts.get(0);
+			p.setIsWelcomePost("0");
+			pDAO.updatePost(p);
+		}
+		
+	}
 	public String postSoftware()
 	{
 		logger.info("upload filen name : " + this.yourFileFileName);
@@ -248,6 +260,7 @@ public class AdminAction extends SuperAction {
 		String isMarkedWelcome = request.getParameter("isMarkedWelcome");
 		String author = request.getParameter("author");
 		String authorHomePageURL = request.getParameter("authorHomePage");
+		String forumURL = request.getParameter("forumPage");
 		
 		logger.info("post title: " + title);
 		logger.info("post description: " + description);
@@ -256,6 +269,21 @@ public class AdminAction extends SuperAction {
 		logger.info("isMarkedWelcome :" + isMarkedWelcome);
 		logger.info("author:" + author);
 		logger.info("author home page url:" + authorHomePageURL);
+		logger.info("forum page url: " + forumURL);
+		
+		if(authorHomePageURL == null)
+		{
+			authorHomePageURL = "";
+		}
+		if(forumURL == null)
+		{
+			forumURL = "";
+		}
+		
+		if(isMarkedWelcome == null)
+		{
+			isMarkedWelcome = "0";
+		}
 		
 		writeUploadFile(newFileName);
 		
@@ -269,7 +297,17 @@ public class AdminAction extends SuperAction {
 		p.setIsWelcomePost(isMarkedWelcome);
 		p.setAuthor(author);
 		p.setAuthorHomePageURL(authorHomePageURL);
+		p.setForumURL(forumURL);
 		PostDAO pDAO = new PostDAOImpl();
+		
+		/*
+		 * 在添加新的post之前，如果当前提交的post被标记为欢迎软件的话，则需要将之前标记为欢迎软件的标记给去掉
+		 */
+		
+		if(isMarkedWelcome.equals("1"))
+		{
+			unMarkPreviousWelcomePost();
+		}
 		pDAO.addPost(p);
 		
 		return "software_post_success";
@@ -804,6 +842,19 @@ public class AdminAction extends SuperAction {
 		String isMarkedWelcome = request.getParameter("isMarkedWelcome");
 		String author = request.getParameter("author");
 		String authorHomePageURL = request.getParameter("authorHomePage");
+		String forumURL = request.getParameter("forumPage");
+		if(authorHomePageURL == null)
+		{
+			authorHomePageURL = "";
+		}
+		if(forumURL == null)
+		{
+			forumURL = "";
+		}
+		if(isMarkedWelcome == null)
+		{
+			isMarkedWelcome = "0";
+		}
 		
 		PostDAO pDAO = new PostDAOImpl();
 		Post p = pDAO.getPost(pid);
@@ -814,6 +865,7 @@ public class AdminAction extends SuperAction {
 		p.setAuthor(author);
 		p.setAuthorHomePageURL(authorHomePageURL);
 		p.setIsWelcomePost(isMarkedWelcome);
+		p.setForumURL(forumURL);
 		
 		
 		if(this.yourFile != null)
@@ -829,6 +881,14 @@ public class AdminAction extends SuperAction {
 			writeUploadFile(newFileName);
 		}
 		
+		/*
+		 * 在添加新的post之前，如果当前提交的post被标记为欢迎软件的话，则需要将之前标记为欢迎软件的标记给去掉
+		 */
+		
+		if(isMarkedWelcome.equals("1"))
+		{
+			unMarkPreviousWelcomePost();
+		}
 		
 		boolean result = pDAO.updatePost(p);
 		request.setAttribute("postToEdit", p);

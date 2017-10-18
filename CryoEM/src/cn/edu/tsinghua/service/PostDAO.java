@@ -12,4 +12,5 @@ public interface PostDAO {
 	public boolean deletePost(int pid);
 	public Post getPost(int pid);
 	public boolean updatePost(Post p);
+	public List<Post> getPostByHQL(String hql);
 }

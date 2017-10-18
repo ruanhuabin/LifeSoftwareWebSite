@@ -117,6 +117,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					    	  Author Home Page: <s:textfield name="authorHomePage" value="%{#request.postToEdit.authorHomePageURL}"></s:textfield>
 					    	  <br/>
 					    	  <br/>
+					    	  
+					    	  Discussing Page: <s:textfield name="forumPage" value="%{#request.postToEdit.forumURL}"></s:textfield>
+					    	  <br/>
+					    	  <br/>
 					    	  <s:if test='#request.postToEdit.isWelcomePost.equals("1")'>
 					    	  	<input type="checkbox" id="markWelcome" name="isMarkedWelcome" value="1" checked/>
     							<label for="markWelcome">Marked as welcome software</label>
