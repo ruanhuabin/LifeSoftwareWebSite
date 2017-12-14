@@ -21,7 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </script>	
 </head>
 <body> 
-<s:debug></s:debug>
+<%-- <s:debug></s:debug> --%>
 
 <div id="main-container">	
 

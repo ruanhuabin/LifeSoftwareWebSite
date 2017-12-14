@@ -4,5 +4,5 @@
 <%
   String path = request.getContextPath();
   String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-  response.sendRedirect(basePath+"user/User_listCurrentSelectPost.action");
+  response.sendRedirect(basePath+"post/Admin_toAdmin.action");
 %>

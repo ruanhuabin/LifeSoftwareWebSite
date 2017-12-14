@@ -23,7 +23,7 @@ function viewPost()
 
 </head>
 <body> 
-<s:debug></s:debug>
+<%-- <s:debug></s:debug> --%>
 
 <div id="main-container">	
 <%-- <div id="header"></div>

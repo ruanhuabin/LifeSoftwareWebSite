@@ -6,13 +6,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 <div id="header"></div>
-<div id="navigation">
+<div id="navigation" align="right">
 	<ul>		
-		<li><a href="<%=path%>/index.jsp">Home</a></li> 
-		<li><a href="<%=path%>/user/User_listCurrentSelectPost.action">Download</a></li>
-		<li><a href="<%=path%>/user/User_listSoftware.action">Test</a></li>
-		<li><a href="<%=path%>/post/Admin_toAdmin.action">Admin</a></li>  
-		<li><a href="http://10.10.32.133/thunder/answers/">Forum</a></li>	
+		 
+		<li><a href="<%=path%>/user/User_listCurrentSelectPost.action">Home</a></li>
+		<%-- <li><a href="<%=path%>/user/User_listSoftware.action">Test</a></li> --%>
+		
+		<li><a href="http://10.10.32.133/thunder/answers/">Q&A Forum</a></li>	
 	</ul>
 </div>
 <div style="clear:both"></div>

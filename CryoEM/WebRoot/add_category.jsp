@@ -26,11 +26,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <p><s:property value="#request.addCategoryResult"/></p>
   <br />
-  <br />
-  Download URL: 
-  <br />
-  <br /> 
-  <textarea rows="5" cols="50" name="description"><s:property value="#request.user_file_URL"/></textarea>
+  
   
 </div> 
 

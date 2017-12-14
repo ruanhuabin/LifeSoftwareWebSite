@@ -67,9 +67,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <br/>
 <br/>
 
- <h3 align="center">
-	 Post Success!
- </h3> 
  
  
 <div id="admin-login-form">

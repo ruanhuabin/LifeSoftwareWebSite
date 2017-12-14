@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="82" version="2.0">
+<workbench progressCount="47" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="524" y="191">
 <fastViewData fastViewLocation="1024"/>
@@ -83,21 +83,22 @@
 <part id="35"/>
 <part id="36"/>
 <part id="37"/>
+<part id="38"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Post.java" partName="Post.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/entity/Post.java" title="Post.java" tooltip="CryoEM/src/cn/edu/tsinghua/entity/Post.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/entity/Post.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1192" selectionTopPixel="330"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4799" selectionTopPixel="3181"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdminAction.java" partName="AdminAction.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/action/AdminAction.java" title="AdminAction.java" tooltip="CryoEM/src/cn/edu/tsinghua/action/AdminAction.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdminAction.java" partName="AdminAction.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/action/AdminAction.java" title="AdminAction.java" tooltip="CryoEM/src/cn/edu/tsinghua/action/AdminAction.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/action/AdminAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="15698" selectionTopPixel="12220"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7985" selectionTopPixel="5074"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PostDAO.java" partName="PostDAO.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/service/PostDAO.java" title="PostDAO.java" tooltip="CryoEM/src/cn/edu/tsinghua/service/PostDAO.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/service/PostDAO.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="190" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="395" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CryoEMLogger.java" partName="CryoEMLogger.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/util/CryoEMLogger.java" title="CryoEMLogger.java" tooltip="CryoEM/src/cn/edu/tsinghua/util/CryoEMLogger.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/util/CryoEMLogger.java"/>
@@ -105,11 +106,11 @@
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PostDAOImpl.java" partName="PostDAOImpl.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/serviceimpl/PostDAOImpl.java" title="PostDAOImpl.java" tooltip="CryoEM/src/cn/edu/tsinghua/serviceimpl/PostDAOImpl.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/serviceimpl/PostDAOImpl.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="394" selectionOffset="433" selectionTopPixel="87"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5284" selectionTopPixel="5407"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestPost.java" partName="TestPost.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/test/TestPost.java" title="TestPost.java" tooltip="CryoEM/src/cn/edu/tsinghua/test/TestPost.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/test/TestPost.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1319" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1825" selectionTopPixel="527"/>
 </editor>
 <editor id="com.genuitec.eclipse.hibernate.editors.HibernateConfigXMLEditor" name="hibernate.cfg.xml" partName="hibernate.cfg.xml" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/hibernate.cfg.xml" title="hibernate.cfg.xml" tooltip="CryoEM/src/hibernate.cfg.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/hibernate.cfg.xml"/>
@@ -143,7 +144,7 @@
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserAction.java" partName="UserAction.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/action/UserAction.java" title="UserAction.java" tooltip="CryoEM/src/cn/edu/tsinghua/action/UserAction.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/action/UserAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="991" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="42" selectionOffset="2432" selectionTopPixel="1672"/>
 </editor>
 <editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="list_software.jsp" partName="list_software.jsp" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/list_software.jsp" title="list_software.jsp" tooltip="CryoEM/WebRoot/list_software.jsp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/list_software.jsp"/>
@@ -213,9 +214,12 @@
 <editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="add_category.jsp" partName="add_category.jsp" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/add_category.jsp" title="add_category.jsp" tooltip="CryoEM/WebRoot/add_category.jsp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/add_category.jsp"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DownloadAction.java" partName="DownloadAction.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/action/DownloadAction.java" title="DownloadAction.java" tooltip="CryoEM/src/cn/edu/tsinghua/action/DownloadAction.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DownloadAction.java" partName="DownloadAction.java" path="D:/MyEclipse_workspace_CryoEM/CryoEM/src/cn/edu/tsinghua/action/DownloadAction.java" title="DownloadAction.java" tooltip="CryoEM/src/cn/edu/tsinghua/action/DownloadAction.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/src/cn/edu/tsinghua/action/DownloadAction.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1779" selectionTopPixel="930"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1886" selectionTopPixel="767"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="list_current_select_software.jsp" partName="list_current_select_software.jsp" path="D:/MyEclipse_workspace_CryoEM/CryoEM/WebRoot/list_current_select_software.jsp" title="list_current_select_software.jsp" tooltip="CryoEM/WebRoot/list_current_select_software.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CryoEM/WebRoot/list_current_select_software.jsp"/>
 </editor>
 </editors>
 <views>
@@ -237,7 +241,8 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (100 of 149 items)"/>
+<category IMemento.internal.id="Warnings (100 of 145 items)"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -406,7 +411,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.16908592" ratioLeft="431" ratioRight="2118" relationship="2" relative="cvslocation"/>
+<info part="org.eclipse.ui.editorss" ratio="0.18124755" ratioLeft="462" ratioRight="2087" relationship="2" relative="cvslocation"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@365a384a" ratio="0.8917311" ratioLeft="1499" ratioRight="182" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
@@ -425,7 +430,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="bottom" ratio="0.45891473" ratioLeft="592" ratioRight="698" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.61627907" ratioLeft="795" ratioRight="495" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -471,112 +476,154 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/CryoEM/WebRoot/admin_login.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/CryoEM/WebRoot/admin.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/CryoEM/WebRoot/header.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/CryoEM/WebRoot/index.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/CryoEM/WebRoot/manage_category.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/CryoEM/WebRoot/manage_post.jsp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CryoEM/src/cn/edu/tsinghua/action/AdminAction.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CryoEM/src/cn/edu/tsinghua/entity/Admin.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CryoEM/src/cn/edu/tsinghua/entity/Post.java"/>
+<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="com.genuitec.eclipse.hibernate.editor.multipage.hibernatemappingeditor" path="/CryoEM/src/cn/edu/tsinghua/entity/Post.hbm.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/CryoEM/WebRoot/admin.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/CryoEM/WebRoot/list_current_select_software.jsp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/CryoEM/WebRoot/edit_post.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/CryoEM/WebRoot/edit_category.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/CryoEM/WebRoot/add_category.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" path="/CryoEM/src/struts.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.struts2.editor" path="/CryoEM/src/struts.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CryoEM/src/cn/edu/tsinghua/action/DownloadAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CryoEM/src/cn/edu/tsinghua/action/UserAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CryoEM/src/cn/edu/tsinghua/service/PostDAO.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CryoEM/src/cn/edu/tsinghua/serviceimpl/PostDAOImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/CryoEM/src/cn/edu/tsinghua/test/TestPost.java"/>
 </editors>
-<item historyLabel="admin_login.jsp" index="0"/>
-<item historyLabel="admin.jsp" index="1"/>
-<item historyLabel="header.jsp" index="2"/>
-<item historyLabel="index.jsp" index="3"/>
-<item historyLabel="header.jsp" index="2"/>
-<item historyLabel="manage_category.jsp" index="4"/>
-<item historyLabel="manage_post.jsp" index="5"/>
-<item historyLabel="manage_category.jsp" index="4"/>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="5041" y="0"/>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="7842" y="0"/>
 </item>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="21419" y="0"/>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="7272" y="113"/>
 </item>
-<item historyLabel="header.jsp" index="2"/>
-<item historyLabel="manage_category.jsp" index="4"/>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="21419" y="0"/>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="21755" y="10"/>
 </item>
-<item historyLabel="Admin.java" index="7">
-<position info="not_deleted" x="644" y="0"/>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="22425" y="0"/>
 </item>
-<item historyLabel="manage_category.jsp" index="4"/>
-<item historyLabel="edit_post.jsp" index="8"/>
-<item historyLabel="edit_category.jsp" index="9"/>
-<item historyLabel="manage_category.jsp" index="4"/>
-<item historyLabel="edit_category.jsp" index="9"/>
-<item historyLabel="add_category.jsp" index="10"/>
-<item historyLabel="edit_category.jsp" index="9"/>
-<item historyLabel="manage_category.jsp" index="4"/>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="21453" y="0"/>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="23870" y="0"/>
 </item>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="15379" y="8"/>
+<item historyLabel="list_current_select_software.jsp" index="4"/>
+<item historyLabel="edit_post.jsp" index="5"/>
+<item historyLabel="list_current_select_software.jsp" index="4"/>
+<item historyLabel="UserAction.java" index="6">
+<position info="not_deleted" x="991" y="0"/>
 </item>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="16248" y="0"/>
+<item historyLabel="UserAction.java" index="6">
+<position info="not_deleted" x="2432" y="42"/>
 </item>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="16248" y="0"/>
+<item historyLabel="Post.java" index="1">
+<position info="not_deleted" x="4799" y="0"/>
 </item>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="16009" y="0"/>
+<item historyLabel="Post.hbm.xml" index="2"/>
+<item historyLabel="list_current_select_software.jsp" index="4"/>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="7336" y="0"/>
 </item>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="16002" y="0"/>
+<item historyLabel="admin.jsp" index="3"/>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="7336" y="0"/>
 </item>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="16055" y="0"/>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="7987" y="0"/>
 </item>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="16044" y="0"/>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="8022" y="0"/>
 </item>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="16112" y="0"/>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="7417" y="0"/>
 </item>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="16096" y="0"/>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="7446" y="0"/>
 </item>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="16142" y="0"/>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="5782" y="0"/>
 </item>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="16248" y="0"/>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="5758" y="0"/>
 </item>
-<item historyLabel="struts.xml" index="11"/>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="16275" y="0"/>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="5766" y="12"/>
 </item>
-<item historyLabel="edit_category.jsp" index="9"/>
-<item historyLabel="manage_category.jsp" index="4"/>
-<item historyLabel="manage_post.jsp" index="5"/>
-<item historyLabel="manage_category.jsp" index="4"/>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="16275" y="0"/>
+<item historyLabel="PostDAO.java" index="7">
+<position info="not_deleted" x="190" y="0"/>
 </item>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="15777" y="0"/>
+<item historyLabel="PostDAO.java" index="7">
+<position info="not_deleted" x="395" y="6"/>
 </item>
-<item historyLabel="AdminAction.java" index="6">
-<position info="not_deleted" x="15698" y="0"/>
+<item historyLabel="PostDAOImpl.java" index="8">
+<position info="not_deleted" x="433" y="394"/>
 </item>
-<item historyLabel="manage_category.jsp" index="4"/>
-<item historyLabel="edit_category.jsp" index="9"/>
-<item historyLabel="struts.xml" index="11"/>
-<item historyLabel="manage_category.jsp" index="4"/>
-<item historyLabel="edit_category.jsp" index="9"/>
-<item historyLabel="struts.xml" index="12"/>
-<item active="true" historyLabel="DownloadAction.java" index="13">
-<position info="not_deleted" x="635" y="14"/>
+<item historyLabel="PostDAOImpl.java" index="8">
+<position info="not_deleted" x="310" y="11"/>
+</item>
+<item historyLabel="TestPost.java" index="9">
+<position info="not_deleted" x="1698" y="42"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="5766" y="12"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="5765" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="5893" y="0"/>
+</item>
+<item historyLabel="PostDAOImpl.java" index="8">
+<position info="not_deleted" x="5284" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="5893" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="5893" y="0"/>
+</item>
+<item historyLabel="TestPost.java" index="9">
+<position info="not_deleted" x="1593" y="16"/>
+</item>
+<item historyLabel="TestPost.java" index="9">
+<position info="not_deleted" x="1825" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="5893" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="5889" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="8047" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="7951" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="21755" y="10"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="22605" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="5915" y="12"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="7884" y="144"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="17093" y="8"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="21755" y="10"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="23463" y="0"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="21755" y="10"/>
+</item>
+<item historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="23442" y="0"/>
+</item>
+<item active="true" historyLabel="AdminAction.java" index="0">
+<position info="not_deleted" x="5915" y="12"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -595,6 +642,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="list_current_select_software.jsp" tooltip="CryoEM/WebRoot/list_current_select_software.jsp">
+<persistable path="/CryoEM/WebRoot/list_current_select_software.jsp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DownloadAction.java" tooltip="CryoEM/src/cn/edu/tsinghua/action/DownloadAction.java">
 <persistable path="/CryoEM/src/cn/edu/tsinghua/action/DownloadAction.java"/>
 </file>
@@ -636,9 +686,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="admin_login.jsp" tooltip="CryoEM/WebRoot/admin_login.jsp">
 <persistable path="/CryoEM/WebRoot/admin_login.jsp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="page_template.jsp" tooltip="CryoEM/WebRoot/page_template.jsp">
-<persistable path="/CryoEM/WebRoot/page_template.jsp"/>
 </file>
 </mruList>
 </workbench>
