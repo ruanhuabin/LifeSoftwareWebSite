@@ -49,6 +49,40 @@ public class AdminDAOImpl implements AdminDAO {
 	}
 
 	@Override
+	public boolean isAdminExist(Admin admin) {
+		
+		Transaction tx = null;
+		try{
+			Session session = MyHibernateSessionFactory.getSessionFactory().getCurrentSession();
+			tx = session.beginTransaction();
+			String hql = "from Admin where username=?";			
+			Query query = session.createQuery(hql);			
+			query.setParameter(0,  admin.getUsername());
+			
+			
+			List list = query.list();
+			tx.commit();			
+			if(list.size() > 0)
+				return true;
+			else			
+				return false;			
+		}
+		catch(Exception ex)
+		{			
+			ex.printStackTrace();
+			return false;
+		}
+		finally
+		{
+			if(tx != null)
+			{
+
+				tx = null;
+			}
+		}
+	}
+	
+	@Override
 	public boolean addAdmin(Admin admin) {
 		Transaction tx = null;
 		

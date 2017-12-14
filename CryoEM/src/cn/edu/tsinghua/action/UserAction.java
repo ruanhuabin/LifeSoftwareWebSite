@@ -104,7 +104,11 @@ public class UserAction extends SuperAction {
 	}
 	private Post getWelcomePost(List<Post> allPosts)
 	{
-		Post welcomePost = allPosts.get(0);
+		Post welcomePost = null;
+		if(allPosts.size() > 0)
+		{
+			welcomePost = allPosts.get(0);
+		}
 		
 		for(Post p: allPosts)
 		{

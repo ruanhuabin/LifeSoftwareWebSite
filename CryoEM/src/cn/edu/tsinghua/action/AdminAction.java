@@ -287,6 +287,15 @@ public class AdminAction extends SuperAction {
 		
 		writeUploadFile(newFileName);
 		
+		authorHomePageURL = authorHomePageURL.trim();
+		if(authorHomePageURL.startsWith("http://") == false)
+			authorHomePageURL = "http://" + authorHomePageURL;		
+		
+		forumURL = forumURL.trim();
+		if(forumURL.startsWith("http://") == false)
+		{
+			forumURL = "http://" + forumURL;
+		}
 		Post p = new Post();
 		p.setTitle(title);
 		p.setDescription(description);
@@ -477,6 +486,32 @@ public class AdminAction extends SuperAction {
 		
 	}
 	
+	
+	public String addAdmin()
+	{
+		
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		
+		Admin admin = new Admin(username, password);
+		AdminDAO adminDAO = new AdminDAOImpl();
+		
+		boolean result = adminDAO.isAdminExist(admin);
+		
+		if(result)
+		{
+			request.setAttribute("addAdminResult", "Failed: Name  \"" + username + "\" is already exist");
+			
+			return "add_admin_failed";
+		}
+		else
+		{
+			adminDAO.addAdmin(admin);
+			request.setAttribute("addAdminResult", "Add Admin  \"" + username + "\" success");
+			return "add_admin_success";
+		}
+		
+	}
 	
 	/**
 	 * Process file that uploading for user to download by the link within description text
@@ -854,6 +889,16 @@ public class AdminAction extends SuperAction {
 		if(isMarkedWelcome == null)
 		{
 			isMarkedWelcome = "0";
+		}
+		
+		authorHomePageURL = authorHomePageURL.trim();
+		if(authorHomePageURL.startsWith("http://") == false)
+			authorHomePageURL = "http://" + authorHomePageURL;		
+		
+		forumURL = forumURL.trim();
+		if(forumURL.startsWith("http://") == false)
+		{
+			forumURL = "http://" + forumURL;
 		}
 		
 		PostDAO pDAO = new PostDAOImpl();

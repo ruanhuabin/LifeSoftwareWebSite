@@ -43,6 +43,14 @@
         	/admin_login.jsp
         </result>
         
+        <result name="add_admin_failed">
+        	/add_admin.jsp
+        </result>
+        
+        <result name="add_admin_success">
+        	/add_admin.jsp
+        </result>
+        
         <result name="upload_user_file_success">
         	/gen_file_download_url.jsp
         </result>
